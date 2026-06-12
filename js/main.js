@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   /* ---------- Yumuşak kaydırma (Lenis) ---------- */
   var lenis = null;
   if (window.Lenis && !reduceMotion) {
-    lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+    lenis = new Lenis({ lerp: 0.14, smoothWheel: true });
     function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
     requestAnimationFrame(raf);
   }
@@ -57,13 +57,20 @@ document.addEventListener("DOMContentLoaded", function () {
     burger.setAttribute("aria-expanded", String(open));
   });
 
+  /* scrollHeight okuması pahalı: sadece boyut değişince hesapla */
+  var maxScroll = 1;
+  function measure() {
+    maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+  }
   function onScroll() {
     var y = window.scrollY || document.documentElement.scrollTop;
     nav.classList.toggle("scrolled", y > 30);
     toTop.classList.toggle("show", y > 700);
-    var max = document.documentElement.scrollHeight - window.innerHeight;
-    if (progress && max > 0) progress.style.transform = "scaleX(" + Math.min(y / max, 1) + ")";
+    if (progress) progress.style.transform = "scaleX(" + Math.min(y / maxScroll, 1) + ")";
   }
+  measure();
+  window.addEventListener("resize", measure, { passive: true });
+  window.addEventListener("load", measure);
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
@@ -145,18 +152,21 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    /* --- Hero mouse paralaks --- */
+    /* --- Hero mouse paralaks (quickTo: her harekette yeni tween üretmez) --- */
     if (!isTouch) {
       var hero = document.querySelector(".hero");
-      var layers = gsap.utils.toArray(".parallax-layer");
+      var movers = gsap.utils.toArray(".parallax-layer").map(function (layer) {
+        return {
+          depth: parseFloat(layer.getAttribute("data-depth")) || 10,
+          toX: gsap.quickTo(layer, "x", { duration: 0.8, ease: "power2.out" }),
+          toY: gsap.quickTo(layer, "y", { duration: 0.8, ease: "power2.out" })
+        };
+      });
       hero.addEventListener("mousemove", function (e) {
         var r = hero.getBoundingClientRect();
         var cx = (e.clientX - r.left) / r.width - 0.5;
         var cy = (e.clientY - r.top) / r.height - 0.5;
-        layers.forEach(function (layer) {
-          var depth = parseFloat(layer.getAttribute("data-depth")) || 10;
-          gsap.to(layer, { x: cx * depth, y: cy * depth, duration: 1, ease: "power2.out", overwrite: "auto" });
-        });
+        movers.forEach(function (m) { m.toX(cx * m.depth); m.toY(cy * m.depth); });
       });
     }
 
@@ -216,12 +226,6 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.to(".steps-line-fill", {
       scaleX: 1, ease: "none",
       scrollTrigger: { trigger: ".steps", start: "top 75%", end: "bottom 60%", scrub: 0.6 }
-    });
-
-    /* --- Marquee'ye hafif paralaks eğim --- */
-    gsap.fromTo(".marquee", { rotate: -1.2 }, {
-      rotate: 0.6, ease: "none",
-      scrollTrigger: { trigger: ".marquee", start: "top bottom", end: "bottom top", scrub: true }
     });
 
     /* Sayfa bir #bölüm linkiyle açıldıysa: konumu koru ve
