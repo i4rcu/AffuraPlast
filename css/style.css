@@ -141,9 +141,7 @@ html[lang="ar"] .kicker { letter-spacing: 0; }
   transition: background 0.4s, box-shadow 0.4s;
 }
 .nav.scrolled {
-  background: rgba(251, 249, 245, 0.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(251, 249, 245, 0.97);
   box-shadow: 0 1px 0 var(--line), 0 10px 26px -22px rgba(58, 18, 64, 0.3);
 }
 .nav-inner {
@@ -311,9 +309,7 @@ html[dir="rtl"] .hero-media { border-radius: 200px 200px 24px 200px; }
   position: absolute; width: 120px; height: 120px;
   border: 1.5px dashed var(--orchid); border-radius: 50%;
   top: 50%; inset-inline-end: -60px; opacity: 0.6;
-  animation: spin 30s linear infinite;
 }
-@keyframes spin { to { transform: rotate(360deg); } }
 
 /* Kaydırma işareti */
 .scroll-cue {
@@ -325,15 +321,9 @@ html[dir="rtl"] .hero-media { border-radius: 200px 200px 24px 200px; }
 }
 html[dir="rtl"] .scroll-cue { transform: translateX(50%); }
 .scroll-cue-line {
-  width: 1.5px; height: 42px; background: var(--line);
-  position: relative; overflow: hidden;
+  width: 1.5px; height: 42px;
+  background: linear-gradient(var(--plum) 40%, var(--line) 40%);
 }
-.scroll-cue-line::after {
-  content: ""; position: absolute; inset-inline: 0; top: -50%;
-  height: 50%; background: var(--plum);
-  animation: cue 2s var(--ease-out) infinite;
-}
-@keyframes cue { 0% { top: -50%; } 60%, 100% { top: 110%; } }
 
 /* ============================================================
    MARQUEE
@@ -416,9 +406,11 @@ html[lang="ar"] .year-badge span { letter-spacing: 0; }
   padding: 34px 28px 28px;
   border: 1px solid rgba(234, 223, 232, 0.7);
   position: relative; overflow: hidden;
-  transition: box-shadow 0.45s var(--ease-out), border-color 0.45s;
+  transition: box-shadow 0.45s var(--ease-out), border-color 0.45s,
+              transform 0.45s var(--ease-out);
   display: flex; flex-direction: column;
 }
+.product-card:hover { transform: translateY(-6px); }
 .product-card::before {
   content: ""; position: absolute; inset: 0;
   background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 0%),
@@ -644,11 +636,7 @@ html[lang="ar"] .footer-col h4 { letter-spacing: 0; }
 .to-top:hover { background: var(--plum-deep); }
 .to-top svg { width: 22px; height: 22px; }
 
-/* ============================================================
-   ANİMASYON YARDIMCILARI
-   (Başlangıç durumları JS ile verilir — JS yoksa site tam görünür)
-   ============================================================ */
-.float-soft { will-change: transform; }
+/* Başlangıç durumları JS ile verilir — JS yoksa site tam görünür */
 
 /* ============================================================
    DUYARLI TASARIM
