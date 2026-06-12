@@ -83,6 +83,11 @@ const I18N = {
       s3: "Dilde Hizmet",
       s4: "Geri Dönüştürülebilir Hedef"
     },
+    gallery: {
+      kicker: "Galeri",
+      title1: "Üretimden ve ürünlerden",
+      title2: "kareler"
+    },
     process: {
       kicker: "Nasıl Çalışıyoruz",
       title1: "Fikirden teslimata",
@@ -201,6 +206,11 @@ const I18N = {
       s3: "Languages Served",
       s4: "Recyclable Goal"
     },
+    gallery: {
+      kicker: "Gallery",
+      title1: "Snapshots from production",
+      title2: "and products"
+    },
     process: {
       kicker: "How We Work",
       title1: "From idea to delivery",
@@ -318,6 +328,11 @@ const I18N = {
       s2: "مجموعات منتجات",
       s3: "لغات خدمة",
       s4: "هدف قابلية التدوير"
+    },
+    gallery: {
+      kicker: "المعرض",
+      title1: "لقطات من الإنتاج",
+      title2: "والمنتجات"
     },
     process: {
       kicker: "كيف نعمل",

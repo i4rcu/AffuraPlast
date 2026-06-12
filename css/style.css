@@ -420,18 +420,37 @@ html[lang="ar"] .year-badge span { letter-spacing: 0; }
 .product-card:hover::before { opacity: 1; }
 .product-card:hover { box-shadow: var(--shadow-soft); border-color: var(--orchid); }
 
+.product-media {
+  position: relative;
+  border-radius: 16px;
+  height: 180px;
+  margin-block-end: 38px;
+}
+
 .product-icon {
-  width: 60px; height: 60px; border-radius: 18px;
+  position: absolute; bottom: -26px; inset-inline-start: 18px;
+  width: 52px; height: 52px; border-radius: 16px;
   background: var(--tint); color: var(--plum-deep);
   display: grid; place-items: center;
-  margin-block-end: 22px;
+  border: 3px solid var(--white);
+  box-shadow: var(--shadow-card);
   transition: background 0.4s, color 0.4s, transform 0.4s var(--ease-out);
+  z-index: 2;
 }
 .product-card:hover .product-icon {
   background: var(--plum); color: var(--white);
   transform: rotate(-6deg) scale(1.06);
 }
-.product-icon svg { width: 30px; height: 30px; }
+.product-icon svg { width: 26px; height: 26px; }
+/* Görsel taşmasın ama ikon rozetini kesmesin */
+.product-media.media { overflow: visible; }
+.product-media img {
+  height: 100%; width: 100%; object-fit: cover;
+  border-radius: 16px;
+}
+.product-media.no-img {
+  background: linear-gradient(145deg, var(--tint), var(--orchid));
+}
 
 .product-card h3 {
   font-family: var(--font-display); font-weight: 600;
@@ -526,6 +545,29 @@ html[dir="rtl"] .card-link:hover .arrow { transform: scaleX(-1) translateX(5px);
 }
 .step h3 { font-family: var(--font-display); font-size: 21px; font-weight: 600; margin-block-end: 8px; }
 .step p { font-size: 14.5px; color: var(--ink-soft); }
+
+/* ============================================================
+   GALERİ
+   ============================================================ */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  grid-auto-rows: 230px;
+  gap: 18px;
+}
+.gallery-item {
+  border-radius: 18px;
+  margin: 0;
+  box-shadow: var(--shadow-card);
+}
+.gallery-item:first-child { grid-row: span 2; }
+.gallery-item:last-child { grid-column: span 2; }
+
+@media (max-width: 900px) {
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 190px; }
+  .gallery-item:first-child { grid-column: span 2; grid-row: span 1; }
+  .gallery-item:last-child { grid-column: span 2; }
+}
 
 /* ============================================================
    İLETİŞİM
