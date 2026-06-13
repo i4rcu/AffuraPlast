@@ -479,8 +479,8 @@ function setLang(lang) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  var saved = "tr";
-  try { saved = localStorage.getItem("affura-lang") || "tr"; } catch (e) { /* yoksay */ }
+  var saved = "ar";
+  try { saved = localStorage.getItem("affura-lang") || "ar"; } catch (e) { /* yoksay */ }
   /* ?lang=en gibi bir parametre kayıtlı tercihi geçersiz kılar (paylaşılabilir link) */
   var urlLang = new URLSearchParams(window.location.search).get("lang");
   if (urlLang && I18N[urlLang]) saved = urlLang;
