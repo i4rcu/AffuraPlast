@@ -265,9 +265,20 @@ html[lang="ar"] .kicker { letter-spacing: 0; }
 
 .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
 
-/* Hero görsel kompozisyonu */
-.hero-visual { position: relative; min-height: 460px; }
+/* Hero güven şeridi */
+.hero-trust {
+  display: flex; align-items: center; gap: 22px;
+  margin-block-start: 40px; flex-wrap: wrap;
+}
+.trust-item { display: flex; flex-direction: column; gap: 2px; }
+.trust-item strong {
+  font-family: var(--font-display); font-size: clamp(24px, 2.4vw, 32px);
+  font-weight: 600; color: var(--plum); line-height: 1;
+}
+.trust-item span { font-size: 13px; color: var(--ink-soft); }
+.trust-sep { width: 1px; height: 34px; background: var(--line); }
 
+/* Genel görsel kabı */
 .media {
   position: relative; overflow: hidden;
   background: linear-gradient(145deg, var(--tint), var(--plum) 130%);
@@ -275,35 +286,32 @@ html[lang="ar"] .kicker { letter-spacing: 0; }
 .media img { width: 100%; height: 100%; object-fit: cover; }
 .media.no-img img { display: none; }
 
-.hero-media {
-  position: absolute; inset: 0;
-  border-radius: var(--radius-leaf);
-  box-shadow: var(--shadow-soft);
-}
-html[dir="rtl"] .hero-media { border-radius: 200px 200px 24px 200px; }
+/* Hero görsel kompozisyonu — gerçek ürün kolajı */
+.hero-visual { position: relative; min-height: 480px; }
 
-.hero-card {
-  position: absolute; top: 9%; inset-inline-start: -7%;
-  display: flex; align-items: center; gap: 12px;
-  background: var(--white); border-radius: 16px;
-  padding: 14px 20px; font-weight: 600; font-size: 14px;
-  box-shadow: var(--shadow-card); z-index: 3;
+.hero-collage { position: absolute; inset: 0; }
+.hc-item { position: absolute; box-shadow: var(--shadow-soft); }
+.hc-main {
+  inset-block: 4% 4%; inset-inline: 14% 6%;
+  border-radius: var(--radius-leaf);
 }
-.hero-card .ic { width: 26px; height: 26px; color: var(--plum); flex-shrink: 0; }
+html[dir="rtl"] .hc-main { border-radius: 200px 200px 24px 200px; }
+.hc-mini {
+  width: 40%; aspect-ratio: 3 / 4;
+  border-radius: 18px; border: 4px solid var(--bg); z-index: 3;
+}
+.hc-a { top: 2%; inset-inline-start: 0; }
+.hc-b { bottom: 0; inset-inline-end: 2%; width: 34%; aspect-ratio: 1 / 1; }
 
 .hero-badge {
-  position: absolute; bottom: 7%; inset-inline-end: -4%;
+  position: absolute; bottom: 12%; inset-inline-start: -2%;
   display: flex; flex-direction: column; gap: 2px;
   background: var(--plum-deep); color: var(--white);
-  border-radius: 18px; padding: 18px 24px;
-  box-shadow: var(--shadow-soft); z-index: 3;
+  border-radius: 18px; padding: 16px 22px;
+  box-shadow: var(--shadow-soft); z-index: 4;
 }
 .hero-badge strong { font-size: 15px; }
-.hero-badge span { font-size: 12.5px; opacity: 0.7; }
-
-.leaf-decor { position: absolute; fill: var(--orchid); opacity: 0.9; z-index: 1; }
-.leaf-a { width: 54px; top: -4%; inset-inline-end: 12%; transform: rotate(20deg); }
-.leaf-b { width: 34px; bottom: 2%; inset-inline-start: 4%; transform: rotate(-30deg); opacity: 0.55; }
+.hero-badge span { font-size: 12.5px; opacity: 0.72; }
 
 .ring-decor {
   position: absolute; width: 120px; height: 120px;
@@ -547,26 +555,52 @@ html[dir="rtl"] .card-link:hover .arrow { transform: scaleX(-1) translateX(5px);
 .step p { font-size: 14.5px; color: var(--ink-soft); }
 
 /* ============================================================
-   GALERİ
+   ÜRÜN VİTRİNİ (NELER YAPIYORUZ)
    ============================================================ */
-.gallery-grid {
+.section-head-center { margin-inline: auto; text-align: center; }
+.section-head-center .kicker { justify-content: center; }
+.section-head-center .lead { margin-inline: auto; }
+
+.showcase-wall {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr;
-  grid-auto-rows: 230px;
-  gap: 18px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
 }
-.gallery-item {
-  border-radius: 18px;
+.sw-item {
   margin: 0;
+  border-radius: 16px;
+  aspect-ratio: 1 / 1;
   box-shadow: var(--shadow-card);
 }
-.gallery-item:first-child { grid-row: span 2; }
-.gallery-item:last-child { grid-column: span 2; }
+.sw-item img { transition: transform 0.5s var(--ease-out); }
+.sw-item:hover img { transform: scale(1.06); }
+.sw-item figcaption {
+  position: absolute; inset-inline: 0; bottom: 0;
+  padding: 24px 14px 12px;
+  font-size: 13px; font-weight: 600; color: var(--white);
+  background: linear-gradient(transparent, rgba(26, 12, 30, 0.78));
+  z-index: 2;
+}
+html[dir="rtl"] .sw-item figcaption { text-align: right; }
+
+.showcase-note {
+  text-align: center; margin-block-start: 36px;
+  font-family: var(--font-display); font-size: clamp(18px, 2vw, 24px);
+  font-style: italic; color: var(--ink-soft);
+}
+html[lang="ar"] .showcase-note { font-style: normal; }
+.showcase-note a {
+  font-style: normal; color: var(--plum); font-weight: 600;
+  border-bottom: 2px solid var(--lime); white-space: nowrap;
+  transition: border-color 0.3s;
+}
+.showcase-note a:hover { border-color: var(--plum); }
 
 @media (max-width: 900px) {
-  .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 190px; }
-  .gallery-item:first-child { grid-column: span 2; grid-row: span 1; }
-  .gallery-item:last-child { grid-column: span 2; }
+  .showcase-wall { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+}
+@media (max-width: 600px) {
+  .showcase-wall { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ============================================================
@@ -697,9 +731,8 @@ html[lang="ar"] .footer-col h4 { letter-spacing: 0; }
   .btn-nav { display: none; }
   .hero-inner { grid-template-columns: 1fr; gap: 60px; }
   .hero { padding-block-end: 110px; }
-  .hero-visual { min-height: 380px; }
-  .hero-card { inset-inline-start: 0; }
-  .hero-badge { inset-inline-end: 0; }
+  .hero-visual { min-height: 420px; max-width: 540px; }
+  .hero-badge { inset-inline-start: 0; }
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .about-visual { max-width: 480px; }
   .footer-grid { grid-template-columns: 1fr; gap: 34px; }

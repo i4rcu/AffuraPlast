@@ -5,7 +5,7 @@
 
 const I18N = {
   tr: {
-    meta: { title: "Affura Plast — Doğaya Saygılı Ambalaj Çözümleri" },
+    meta: { title: "Affura Plast — Her Ürün İçin Ambalaj Üretiyoruz" },
     nav: {
       about: "Hakkımızda",
       products: "Ürünlerimiz",
@@ -16,15 +16,37 @@ const I18N = {
     },
     hero: {
       kicker: "Gaziantep'ten dünyaya · 2016'dan beri",
-      t1: "Doğaya Saygılı",
-      t2: "Ambalaj Çözümleri",
-      sub: "Affura Plast; gıda ve gıda dışı sektörler için baskılı ve baskısız polietilen ambalajları uluslararası standartlarda üretir.",
+      t1: "Her ürün için",
+      t2: "ambalaj üretiyoruz",
+      sub: "Kahveden sosa, süt tozundan unlu mamule, içecekten dondurulmuş gıdaya — hangi sektörde olursanız olun, markanızın ihtiyacı olan baskılı ve esnek ambalajı tek çatı altında üretiyoruz.",
       cta1: "Teklif Alın",
-      cta2: "Ürünleri Keşfedin",
+      cta2: "Neler Yapıyoruz?",
       scroll: "Keşfetmek için kaydırın",
-      badge: "%100 Geri Dönüştürülebilir",
-      badgeSub: "hammadde hedefi",
-      card: "Uluslararası Standartlar"
+      badge: "Tek çatı altında",
+      badgeSub: "tasarım · üretim · baskı",
+      trust1: "ürün kategorisi",
+      trust2: "kıtaya ihracat",
+      trust3: "müşteriye özel"
+    },
+    showcase: {
+      kicker: "Neler Yapıyoruz",
+      title1: "Tek çatı altında,",
+      title2: "sınırsız ürün",
+      sub: "Aşağıdaki ambalajların tamamı Affura Plast üretimidir. Sizin ürününüz de bu vitrinde yerini alabilir.",
+      c1: "Türk Kahvesi",
+      c2: "Espresso Pouch",
+      c3: "Dondurulmuş Gıda",
+      c4: "Sos & Ketçap",
+      c5: "Humus & Meze",
+      c6: "Süt Tozu",
+      c7: "Unlu Mamul",
+      c8: "İçecek Paketi",
+      c9: "Ekmek Poşeti",
+      c10: "Toz Ürünler",
+      c11: "Squeeze Şişe",
+      c12: "Sıcak İçecek",
+      note: "… ve aklınıza gelen her ürün. ",
+      noteLink: "Sizin ambalajınızı da üretelim →"
     },
     marquee: {
       m1: "Gıda Ambalajı",
@@ -128,7 +150,7 @@ const I18N = {
   },
 
   en: {
-    meta: { title: "Affura Plast — Nature-Friendly Packaging Solutions" },
+    meta: { title: "Affura Plast — We Produce Packaging for Every Product" },
     nav: {
       about: "About Us",
       products: "Products",
@@ -139,15 +161,37 @@ const I18N = {
     },
     hero: {
       kicker: "From Gaziantep to the world · since 2016",
-      t1: "Nature-Friendly",
-      t2: "Packaging Solutions",
-      sub: "Affura Plast manufactures printed and unprinted polyethylene packaging for food and non-food industries, to international standards.",
+      t1: "We produce packaging",
+      t2: "for every product",
+      sub: "From coffee to sauces, milk powder to bakery, beverages to frozen food — whatever your industry, we produce the printed and flexible packaging your brand needs, all under one roof.",
       cta1: "Get a Quote",
-      cta2: "Explore Products",
+      cta2: "What We Do",
       scroll: "Scroll to explore",
-      badge: "100% Recyclable",
-      badgeSub: "raw material goal",
-      card: "International Standards"
+      badge: "Under one roof",
+      badgeSub: "design · production · print",
+      trust1: "product categories",
+      trust2: "continents served",
+      trust3: "made to order"
+    },
+    showcase: {
+      kicker: "What We Do",
+      title1: "Endless products,",
+      title2: "one roof",
+      sub: "Every package below is produced by Affura Plast. Your product can take its place in this showcase too.",
+      c1: "Turkish Coffee",
+      c2: "Espresso Pouch",
+      c3: "Frozen Food",
+      c4: "Sauce & Ketchup",
+      c5: "Hummus & Meze",
+      c6: "Milk Powder",
+      c7: "Bakery",
+      c8: "Beverage Pack",
+      c9: "Bread Bag",
+      c10: "Powders",
+      c11: "Squeeze Bottle",
+      c12: "Hot Drinks",
+      note: "… and any product you can imagine. ",
+      noteLink: "Let's produce yours too →"
     },
     marquee: {
       m1: "Food Packaging",
@@ -251,7 +295,7 @@ const I18N = {
   },
 
   ar: {
-    meta: { title: "أفورا بلاست — حلول تغليف صديقة للطبيعة" },
+    meta: { title: "أفورا بلاست — ننتج التغليف لكل منتج" },
     nav: {
       about: "من نحن",
       products: "منتجاتنا",
@@ -262,15 +306,37 @@ const I18N = {
     },
     hero: {
       kicker: "من غازي عنتاب إلى العالم · منذ 2016",
-      t1: "حلول تغليف",
-      t2: "صديقة للطبيعة",
-      sub: "تُنتج أفورا بلاست عبوات بولي إيثيلين مطبوعة وغير مطبوعة للقطاعات الغذائية وغير الغذائية وفق المعايير الدولية.",
+      t1: "ننتج التغليف",
+      t2: "لكل منتج",
+      sub: "من القهوة إلى الصلصات، ومن حليب البودرة إلى المخبوزات، ومن المشروبات إلى الأغذية المجمّدة — أياً كان قطاعك، ننتج التغليف المطبوع والمرن الذي تحتاجه علامتك التجارية، تحت سقف واحد.",
       cta1: "اطلب عرض سعر",
-      cta2: "اكتشف منتجاتنا",
+      cta2: "ماذا ننتج؟",
       scroll: "مرّر للاستكشاف",
-      badge: "قابل للتدوير 100%",
-      badgeSub: "هدفنا في المواد الخام",
-      card: "معايير دولية"
+      badge: "تحت سقف واحد",
+      badgeSub: "تصميم · إنتاج · طباعة",
+      trust1: "فئة منتجات",
+      trust2: "قارات نخدمها",
+      trust3: "حسب الطلب"
+    },
+    showcase: {
+      kicker: "ماذا ننتج",
+      title1: "منتجات لا حصر لها،",
+      title2: "سقف واحد",
+      sub: "جميع العبوات أدناه من إنتاج أفورا بلاست. يمكن لمنتجك أن يأخذ مكانه في هذا المعرض أيضاً.",
+      c1: "قهوة تركية",
+      c2: "كيس إسبريسو",
+      c3: "أغذية مجمّدة",
+      c4: "صلصة وكاتشب",
+      c5: "حمص ومقبلات",
+      c6: "حليب بودرة",
+      c7: "مخبوزات",
+      c8: "عبوة مشروبات",
+      c9: "كيس خبز",
+      c10: "مساحيق",
+      c11: "زجاجة ضغط",
+      c12: "مشروبات ساخنة",
+      note: "… وأي منتج يخطر ببالك. ",
+      noteLink: "لننتج عبوتك أيضاً ←"
     },
     marquee: {
       m1: "تغليف المواد الغذائية",
