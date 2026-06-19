@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>أفورا بلاست — ننتج التغليف لكل منتج</title>
-  <meta name="description" content="أفورا بلاست — مصنّع تغليف مقره غازي عنتاب. من القهوة إلى الصلصات، ومن حليب البودرة إلى المخبوزات، ومن المشروبات إلى الأغذية المجمّدة، تغليف مطبوع ومرن لكل القطاعات. منذ 2016.">
+  <script>document.documentElement.classList.add('js');</script>
+  <title>عفورة بلاست — ننتج التغليف لكل منتج</title>
+  <meta name="description" content="عفورة بلاست — مصنّع تغليف مقره غازي عنتاب. تغليف مطبوع ومرن لكل القطاعات: قهوة، صلصات، حليب بودرة، مخبوزات، مشروبات، أغذية مجمّدة. منذ 2016.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Archivo:wght@400;500;600;700&family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
-
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2C8 8 4 16 8 24c4 8 16 6 20-2C24 26 12 26 16 2z' fill='%23702979'/%3E%3C/svg%3E">
 
-  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
   <script defer src="js/i18n.js"></script>
   <script defer src="js/main.js"></script>
 </head>
@@ -23,395 +21,232 @@
 
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
-  <!-- ============ ÜST MENÜ ============ -->
+  <!-- ============ NAV ============ -->
   <header class="nav" id="top">
     <div class="nav-inner">
       <a href="#hero" class="logo" aria-label="Affura Plast">
-        <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
-          <path d="M16 2C8 8 4 16 8 24c4 8 16 6 20-2C24 26 12 26 16 2z"/>
-        </svg>
-        <span class="logo-word">Affura<em>Plast</em></span>
+        <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2C8 8 4 16 8 24c4 8 16 6 20-2C24 26 12 26 16 2z"/></svg>
+        <span class="logo-word"><span data-i18n="brand.p1">Affura</span><em data-i18n="brand.p2">Plast</em></span>
       </a>
 
-      <nav class="nav-links" aria-label="Ana menü">
-        <a href="#about"          data-i18n="nav.about">Hakkımızda</a>
-        <a href="#products"       data-i18n="nav.products">Ürünlerimiz</a>
-        <a href="#sustainability" data-i18n="nav.sustainability">Sürdürülebilirlik</a>
-        <a href="#process"        data-i18n="nav.process">Süreç</a>
-        <a href="#contact"        data-i18n="nav.contact">İletişim</a>
+      <nav class="nav-links" aria-label="menu">
+        <a href="#products" data-i18n="nav.products">Ürünler</a>
+        <a href="#why"      data-i18n="nav.why">Neden Biz</a>
+        <a href="#about"    data-i18n="nav.about">Hakkımızda</a>
+        <a href="#process"  data-i18n="nav.process">Süreç</a>
+        <a href="#contact"  data-i18n="nav.contact">İletişim</a>
       </nav>
 
       <div class="nav-actions">
-        <div class="lang-switch" role="group" aria-label="Dil seçimi">
+        <div class="lang-switch" role="group" aria-label="lang">
+          <button class="lang-btn active" data-lang="ar">ع</button>
           <button class="lang-btn" data-lang="tr">TR</button>
           <button class="lang-btn" data-lang="en">EN</button>
-          <button class="lang-btn active" data-lang="ar">ع</button>
         </div>
         <a href="#contact" class="btn btn-primary btn-nav" data-i18n="nav.cta">Teklif Al</a>
-        <button class="burger" aria-label="Menüyü aç" aria-expanded="false">
-          <span></span><span></span>
-        </button>
+        <button class="burger" aria-label="menu" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
-
-    <div class="mobile-menu">
-      <a href="#about"          data-i18n="nav.about">Hakkımızda</a>
-      <a href="#products"       data-i18n="nav.products">Ürünlerimiz</a>
-      <a href="#sustainability" data-i18n="nav.sustainability">Sürdürülebilirlik</a>
-      <a href="#process"        data-i18n="nav.process">Süreç</a>
-      <a href="#contact"        data-i18n="nav.contact">İletişim</a>
-      <a href="#contact" class="btn btn-primary" data-i18n="nav.cta">Teklif Al</a>
-    </div>
   </header>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-links">
+      <a href="#products" data-i18n="nav.products">Ürünler</a>
+      <a href="#why"      data-i18n="nav.why">Neden Biz</a>
+      <a href="#about"    data-i18n="nav.about">Hakkımızda</a>
+      <a href="#process"  data-i18n="nav.process">Süreç</a>
+      <a href="#contact"  data-i18n="nav.contact">İletişim</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary btn-lg" data-i18n="nav.cta">Teklif Al</a>
+  </div>
 
   <main>
 
     <!-- ============ HERO ============ -->
     <section class="hero" id="hero">
-      <div class="hero-bg" aria-hidden="true">
-        <span class="blob blob-1"></span>
-        <span class="blob blob-2"></span>
-      </div>
-
-      <div class="hero-inner">
-        <div class="hero-content">
-          <p class="kicker hero-kicker"><span class="kicker-dot"></span><span data-i18n="hero.kicker">Gaziantep'ten dünyaya · 2016'dan beri</span></p>
-          <h1 class="hero-title">
-            <span class="line"><em data-i18n="hero.t1">Her ürün için</em></span>
-            <span class="line"><span data-i18n="hero.t2">ambalaj üretiyoruz</span></span>
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="kicker anim" data-anim><span class="dot"></span><span data-i18n="hero.kicker">Gaziantep'ten dünyaya · 2016'dan beri</span></p>
+          <h1 class="hero-title" data-anim data-d="1">
+            <span class="line" data-i18n="hero.t1">Her ürün için</span>
+            <em class="line" data-i18n="hero.t2">ambalaj üretiyoruz</em>
           </h1>
-          <p class="hero-sub" data-i18n="hero.sub">Kahveden sosa, süt tozundan unlu mamule, içecekten dondurulmuş gıdaya — hangi sektörde olursanız olun, markanızın ihtiyacı olan baskılı ve esnek ambalajı tek çatı altında üretiyoruz.</p>
-          <div class="hero-ctas">
-            <a href="#contact" class="btn btn-primary btn-lg magnetic" data-i18n="hero.cta1">Teklif Alın</a>
-            <a href="#showcase" class="btn btn-ghost btn-lg magnetic" data-i18n="hero.cta2">Neler Yapıyoruz?</a>
-          </div>
-
-          <div class="hero-trust">
-            <div class="trust-item">
-              <strong>15+</strong>
-              <span data-i18n="hero.trust1">ürün kategorisi</span>
-            </div>
-            <span class="trust-sep" aria-hidden="true"></span>
-            <div class="trust-item">
-              <strong>3</strong>
-              <span data-i18n="hero.trust2">kıtaya ihracat</span>
-            </div>
-            <span class="trust-sep" aria-hidden="true"></span>
-            <div class="trust-item">
-              <strong>%100</strong>
-              <span data-i18n="hero.trust3">müşteriye özel</span>
-            </div>
+          <p class="hero-sub anim" data-anim data-d="3" data-i18n="hero.sub">Kahveden soslara, süt tozundan unlu mamule…</p>
+          <div class="hero-ctas anim" data-anim data-d="4">
+            <a href="#contact" class="btn btn-primary btn-lg" data-i18n="hero.cta1">Teklif Alın</a>
+            <a href="#products" class="btn btn-line btn-lg" data-i18n="hero.cta2">Ürünleri Gör</a>
           </div>
         </div>
 
         <div class="hero-visual" aria-hidden="true">
-          <div class="hero-collage">
-            <div class="hc-item hc-main media parallax-layer" data-depth="10">
-              <img src="images/products/turkish-coffee.jpg" alt="" loading="eager" onerror="this.closest('.media').classList.add('no-img')">
-            </div>
-            <div class="hc-item hc-mini hc-a media float-soft parallax-layer" data-depth="26">
-              <img src="images/products/espresso-pouch.jpg" alt="" loading="eager" onerror="this.closest('.media').classList.add('no-img')">
-            </div>
-            <div class="hc-item hc-mini hc-b media float-soft parallax-layer" data-depth="34">
-              <img src="images/products/frozen-corn.jpg" alt="" loading="eager" onerror="this.closest('.media').classList.add('no-img')">
-            </div>
+          <span class="hero-blob" data-anim data-d="2"></span>
+          <div class="hero-img hero-img-main media anim-img" data-anim data-d="3">
+            <img src="images/products/turkish-coffee.jpg" alt="" loading="eager" onerror="this.closest('.media').classList.add('no-img')">
           </div>
-          <div class="hero-badge float-soft parallax-layer" data-depth="20">
-            <strong data-i18n="hero.badge">Tek çatı altında</strong>
-            <span data-i18n="hero.badgeSub">tasarım · üretim · baskı</span>
+          <div class="hero-img hero-img-mini media anim-img" data-anim data-d="5">
+            <img src="images/products/espresso-pouch.jpg" alt="" loading="eager" onerror="this.closest('.media').classList.add('no-img')">
           </div>
-          <span class="ring-decor"></span>
         </div>
       </div>
 
-      <a href="#showcase" class="scroll-cue">
+      <a href="#products" class="scroll-cue anim" data-anim data-d="5">
         <span class="scroll-cue-line"></span>
-        <span data-i18n="hero.scroll">Keşfetmek için kaydırın</span>
+        <span data-i18n="hero.scroll">Aşağı kaydır</span>
       </a>
     </section>
 
     <!-- ============ MARQUEE ============ -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
-        <div class="marquee-group">
-          <span data-i18n="marquee.m1">Gıda Ambalajı</span><i>✦</i>
-          <span data-i18n="marquee.m2">Stand-up Pouch</span><i>✦</i>
-          <span data-i18n="marquee.m3">Baskılı Poşet</span><i>✦</i>
-          <span data-i18n="marquee.m4">Geri Dönüşüm</span><i>✦</i>
-          <span data-i18n="marquee.m5">Doğa Dostu Üretim</span><i>✦</i>
-          <span data-i18n="marquee.m6">Grafik Tasarım</span><i>✦</i>
+        <div class="mq-group">
+          <span data-i18n="marquee.0">Gıda Ambalajı</span><i>✦</i>
+          <span data-i18n="marquee.1">Stand-up Pouch</span><i>✦</i>
+          <span data-i18n="marquee.2">Baskılı Poşet</span><i>✦</i>
+          <span data-i18n="marquee.3">Esnek Filmler</span><i>✦</i>
+          <span data-i18n="marquee.4">Grafik Tasarım</span><i>✦</i>
+          <span data-i18n="marquee.5">Yüksek Çözünürlüklü Baskı</span><i>✦</i>
         </div>
-        <div class="marquee-group">
-          <span data-i18n="marquee.m1">Gıda Ambalajı</span><i>✦</i>
-          <span data-i18n="marquee.m2">Stand-up Pouch</span><i>✦</i>
-          <span data-i18n="marquee.m3">Baskılı Poşet</span><i>✦</i>
-          <span data-i18n="marquee.m4">Geri Dönüşüm</span><i>✦</i>
-          <span data-i18n="marquee.m5">Doğa Dostu Üretim</span><i>✦</i>
-          <span data-i18n="marquee.m6">Grafik Tasarım</span><i>✦</i>
+        <div class="mq-group">
+          <span data-i18n="marquee.0">Gıda Ambalajı</span><i>✦</i>
+          <span data-i18n="marquee.1">Stand-up Pouch</span><i>✦</i>
+          <span data-i18n="marquee.2">Baskılı Poşet</span><i>✦</i>
+          <span data-i18n="marquee.3">Esnek Filmler</span><i>✦</i>
+          <span data-i18n="marquee.4">Grafik Tasarım</span><i>✦</i>
+          <span data-i18n="marquee.5">Yüksek Çözünürlüklü Baskı</span><i>✦</i>
         </div>
       </div>
     </div>
 
-    <!-- ============ ÜRÜN VİTRİNİ (NELER YAPIYORUZ) ============ -->
-    <section class="showcase section" id="showcase">
-      <div class="container">
-        <div class="section-head section-head-center">
-          <p class="kicker reveal"><span class="kicker-dot"></span><span data-i18n="showcase.kicker">Neler Yapıyoruz</span></p>
-          <h2 class="section-title reveal">
-            <span data-i18n="showcase.title1">Tek çatı altında,</span>
-            <em data-i18n="showcase.title2">sınırsız ürün</em>
-          </h2>
-          <p class="lead reveal" data-i18n="showcase.sub">Aşağıdaki ambalajların tamamı Affura Plast üretimidir. Sizin ürününüz de bu vitrinde yerini alabilir.</p>
+    <!-- ============ SHOWCASE (yatay) ============ -->
+    <section class="showcase" id="products">
+      <div class="container showcase-head">
+        <p class="kicker" data-anim><span class="dot"></span><span data-i18n="showcase.kicker">Neler Üretiyoruz</span></p>
+        <h2 class="h-sec" data-anim data-i18n="showcase.title">Sınırsız ürün, tek çatı</h2>
+        <p class="lead" data-anim data-i18n="showcase.sub">İncelemek için kaydırın.</p>
+      </div>
+
+      <div class="showcase-rail" role="list">
+        <figure class="sc-card media" role="listitem"><img src="images/products/turkish-coffee.jpg" alt="" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.items.0">Türk Kahvesi</figcaption></figure>
+        <figure class="sc-card media" role="listitem"><img src="images/products/espresso-pouch.jpg" alt="" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.items.1">Espresso Pouch</figcaption></figure>
+        <figure class="sc-card media" role="listitem"><img src="images/products/frozen-corn.jpg" alt="" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.items.2">Dondurulmuş Gıda</figcaption></figure>
+        <figure class="sc-card media" role="listitem"><img src="images/products/ketchup.jpg" alt="" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.items.3">Sos & Ketçap</figcaption></figure>
+        <figure class="sc-card media" role="listitem"><img src="images/products/humus.jpg" alt="" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.items.4">Humus & Meze</figcaption></figure>
+        <figure class="sc-card media" role="listitem"><img src="images/products/milk-powder.jpg" alt="" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.items.5">Süt Tozu</figcaption></figure>
+        <figure class="sc-card media" role="listitem"><img src="images/products/tortilla-lavas.jpg" alt="" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.items.6">Unlu Mamul</figcaption></figure>
+        <figure class="sc-card media" role="listitem"><img src="images/products/cola-pack.jpg" alt="" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.items.7">İçecek Paketi</figcaption></figure>
+        <figure class="sc-card media" role="listitem"><img src="images/products/premium-bread.jpg" alt="" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.items.8">Ekmek Poşeti</figcaption></figure>
+        <figure class="sc-card media" role="listitem"><img src="images/products/cappuccino-pouch.jpg" alt="" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.items.9">Cappuccino</figcaption></figure>
+      </div>
+      <p class="container showcase-note" data-anim data-i18n="showcase.note">Sizin ürününüz de burada yerini alabilir.</p>
+    </section>
+
+    <!-- ============ WHY (sticky) ============ -->
+    <section class="why" id="why">
+      <div class="container why-grid">
+        <div class="why-sticky">
+          <p class="kicker" data-anim><span class="dot"></span><span data-i18n="why.kicker">Neden Affura Plast</span></p>
+          <h2 class="h-sec" data-anim data-i18n="why.title">Fikirden rafa, eksiksiz ambalaj ortağı</h2>
+          <p class="lead" data-anim data-i18n="why.sub">Her adımı kendimiz kontrol ederiz.</p>
         </div>
 
-        <div class="showcase-wall">
-          <figure class="sw-item media reveal"><img src="images/products/turkish-coffee.jpg" alt="Türk kahvesi ambalajı" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.c1">Türk Kahvesi</figcaption></figure>
-          <figure class="sw-item media reveal"><img src="images/products/espresso-pouch.jpg" alt="Espresso stand-up pouch" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.c2">Espresso Pouch</figcaption></figure>
-          <figure class="sw-item media reveal"><img src="images/products/frozen-corn.jpg" alt="Dondurulmuş mısır ambalajı" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.c3">Dondurulmuş Gıda</figcaption></figure>
-          <figure class="sw-item media reveal"><img src="images/products/ketchup.jpg" alt="Ketçap şişesi" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.c4">Sos & Ketçap</figcaption></figure>
-          <figure class="sw-item media reveal"><img src="images/products/humus.jpg" alt="Humus ambalajı" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.c5">Humus & Meze</figcaption></figure>
-          <figure class="sw-item media reveal"><img src="images/products/milk-powder.jpg" alt="Süt tozu ambalajı ve filmi" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.c6">Süt Tozu</figcaption></figure>
-          <figure class="sw-item media reveal"><img src="images/products/tortilla-lavas.jpg" alt="Tortilla lavaş ambalajı" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.c7">Unlu Mamul</figcaption></figure>
-          <figure class="sw-item media reveal"><img src="images/products/cola-pack.jpg" alt="Kola altılı paket" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.c8">İçecek Paketi</figcaption></figure>
-          <figure class="sw-item media reveal"><img src="images/products/premium-bread.jpg" alt="Şeffaf ekmek poşeti" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.c9">Ekmek Poşeti</figcaption></figure>
-          <figure class="sw-item media reveal"><img src="images/products/powder-sugar.jpg" alt="Pudra şekeri ambalajı" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.c10">Toz Ürünler</figcaption></figure>
-          <figure class="sw-item media reveal"><img src="images/products/garlic-sauce-bottle.jpg" alt="Sarımsak sos şişesi" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.c11">Squeeze Şişe</figcaption></figure>
-          <figure class="sw-item media reveal"><img src="images/products/cappuccino-pouch.jpg" alt="Cappuccino ambalajı" loading="lazy" onerror="this.closest('.media').classList.add('no-img')"><figcaption data-i18n="showcase.c12">Sıcak İçecek</figcaption></figure>
+        <div class="why-list">
+          <article class="why-item" data-anim>
+            <span class="why-num">01</span>
+            <div class="why-ic"><svg viewBox="0 0 24 24"><path d="m14.5 4.5 5 5L8 21H3v-5L14.5 4.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="m12 7 5 5" stroke="currentColor" stroke-width="1.5"/></svg></div>
+            <h3 data-i18n="why.f1t">Markanıza Özel Tasarım</h3>
+            <p data-i18n="why.f1d">Grafik ekibimiz fikrinizi baskıya hazır tasarıma dönüştürür.</p>
+          </article>
+          <article class="why-item" data-anim>
+            <span class="why-num">02</span>
+            <div class="why-ic"><svg viewBox="0 0 24 24"><path d="M3 9h18v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3 9l2.5-5h13L21 9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 13h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <h3 data-i18n="why.f2t">Tek Çatı Altında Üretim</h3>
+            <p data-i18n="why.f2d">İstediğiniz ölçü ve özellikte modern hatlarda üretiriz.</p>
+          </article>
+          <article class="why-item" data-anim>
+            <span class="why-num">03</span>
+            <div class="why-ic"><svg viewBox="0 0 24 24"><path d="M6 9V3h12v6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><rect x="3" y="9" width="18" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M7 17h10v4H7z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+            <h3 data-i18n="why.f3t">Yüksek Çözünürlüklü Baskı</h3>
+            <p data-i18n="why.f3d">Canlı renkler ve keskin detaylarla rafta öne çıkarsınız.</p>
+          </article>
+          <article class="why-item" data-anim>
+            <span class="why-num">04</span>
+            <div class="why-ic"><svg viewBox="0 0 24 24"><path d="M12 21C7 16 4 12.5 7 8c2-3 7-3 9 0 .8-2 3-3 5-2-1 6-4 10-9 15Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+            <h3 data-i18n="why.f4t">Doğa Dostu</h3>
+            <p data-i18n="why.f4d">Polietileni geri dönüştürür, atığı kaynağında azaltırız.</p>
+          </article>
         </div>
-
-        <p class="showcase-note reveal" data-i18n="showcase.note">… ve aklınıza gelen her ürün. <a href="#contact" data-i18n="showcase.noteLink">Sizin ambalajınızı da üretelim →</a></p>
       </div>
     </section>
 
-    <!-- ============ HAKKIMIZDA ============ -->
-    <section class="about section section-alt" id="about">
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
       <div class="container about-grid">
-        <div class="about-visual">
-          <div class="about-media media img-reveal">
-            <img src="images/products/ketchup.jpg"
-                 alt="Affura Plast üretimi ketçap ambalajı" loading="lazy"
-                 onerror="this.closest('.media').classList.add('no-img')">
-          </div>
-          <div class="year-badge float-soft">
-            <strong>2016</strong>
-            <span data-i18n="about.badgeLabel">Kuruluş</span>
-          </div>
+        <div class="about-media media anim-img" data-anim>
+          <img src="images/products/aleppo-coffee.jpg" alt="" loading="lazy" onerror="this.closest('.media').classList.add('no-img')">
+          <span class="about-year" data-anim>2016</span>
         </div>
-
-        <div class="about-content">
-          <p class="kicker reveal"><span class="kicker-dot"></span><span data-i18n="about.kicker">Hakkımızda</span></p>
-          <h2 class="section-title reveal">
-            <em data-i18n="about.title1">2016'dan beri</em><br>
-            <span data-i18n="about.title2">Gaziantep'te üretiyoruz</span>
-          </h2>
-          <p class="lead reveal" data-i18n="about.p1">Affura Plast, kurulduğu günden bu yana kaliteli ürünleri, rekabetçi fiyatları ve müşteri memnuniyetini merkeze alan yaklaşımıyla ambalaj sektöründe güvenilir bir çözüm ortağıdır.</p>
-          <p class="body-text reveal" data-i18n="about.p2">Teknolojik altyapımızı ve yetkin iş gücümüzü sürekli geliştirerek, beklentilerin ötesinde çevre dostu ürünler sunuyoruz.</p>
-
-          <div class="mv-cards">
-            <div class="mv-card reveal">
-              <svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg>
+        <div class="about-text">
+          <p class="kicker" data-anim><span class="dot"></span><span data-i18n="about.kicker">Hakkımızda</span></p>
+          <h2 class="h-sec" data-anim data-i18n="about.title">2016'dan beri Gaziantep'te üretiyoruz</h2>
+          <p class="lead" data-anim data-i18n="about.p1">Affura Plast güvenilir bir çözüm ortağıdır.</p>
+          <p class="body" data-anim data-i18n="about.p2">Çevre dostu ürünler sunuyoruz.</p>
+          <div class="mv">
+            <div class="mv-card" data-anim>
               <h3 data-i18n="about.missionT">Misyonumuz</h3>
-              <p data-i18n="about.missionP">Teknolojik altyapıyı ve nitelikli iş gücünü sürekli geliştirerek müşteri beklentilerini aşan, yenilikçi ve çevre dostu ürünler sunmak.</p>
+              <p data-i18n="about.missionP">…</p>
             </div>
-            <div class="mv-card reveal">
-              <svg viewBox="0 0 24 24" class="ic"><path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            <div class="mv-card" data-anim>
               <h3 data-i18n="about.visionT">Vizyonumuz</h3>
-              <p data-i18n="about.visionP">Baskı ve ambalaj sektöründe öncü bir kuruluş olmak.</p>
+              <p data-i18n="about.visionP">…</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ ÜRÜNLER ============ -->
-    <section class="products section" id="products">
-      <div class="container">
-        <div class="section-head">
-          <p class="kicker reveal"><span class="kicker-dot"></span><span data-i18n="products.kicker">Ürünlerimiz</span></p>
-          <h2 class="section-title reveal">
-            <span data-i18n="products.title1">Her ihtiyaca uygun</span>
-            <em data-i18n="products.title2">ambalaj</em>
-          </h2>
-          <p class="lead reveal" data-i18n="products.sub">Gıdadan endüstriye, tasarımdan baskıya — eksiksiz ambalaj çözümleri tek çatı altında.</p>
-        </div>
-
-        <div class="product-grid">
-          <article class="product-card tilt">
-            <div class="product-media media">
-              <img src="images/products/garlic-sauce-bag.jpg" alt="Baskılı polietilen poşet — sarımsak sos ambalajı" loading="lazy" onerror="this.closest('.media').classList.add('no-img')">
-              <div class="product-icon">
-                <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 13H7L6 8Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9.5 13.5h5M9.8 16.5h4.4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
-              </div>
-            </div>
-            <h3 data-i18n="products.p1t">Baskılı Polietilen Poşet</h3>
-            <p data-i18n="products.p1d">Markanızı taşıyan, yüksek çözünürlüklü baskıya sahip dayanıklı polietilen poşetler.</p>
-            <a href="#contact" class="card-link"><span data-i18n="products.link">Teklif İste</span><i class="arrow">→</i></a>
-          </article>
-
-          <article class="product-card tilt">
-            <div class="product-media media">
-              <img src="images/products/premium-bread.jpg" alt="Baskısız şeffaf polietilen ekmek poşeti" loading="lazy" onerror="this.closest('.media').classList.add('no-img')">
-              <div class="product-icon">
-                <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 13H7L6 8Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-              </div>
-            </div>
-            <h3 data-i18n="products.p2t">Baskısız Polietilen Poşet</h3>
-            <p data-i18n="products.p2d">Her sektöre uygun, ekonomik ve dayanıklı şeffaf veya renkli poşet çözümleri.</p>
-            <a href="#contact" class="card-link"><span data-i18n="products.link">Teklif İste</span><i class="arrow">→</i></a>
-          </article>
-
-          <article class="product-card tilt">
-            <div class="product-media media">
-              <img src="images/products/humus.jpg" alt="Gıda ambalajı — humus paketi" loading="lazy" onerror="this.closest('.media').classList.add('no-img')">
-              <div class="product-icon">
-                <svg viewBox="0 0 24 24"><path d="M4 9h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4 9l2-4h12l2 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 13h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-              </div>
-            </div>
-            <h3 data-i18n="products.p3t">Gıda Ambalajı</h3>
-            <p data-i18n="products.p3d">Gıda güvenliği standartlarına tam uyumlu, tazeliği koruyan hijyenik ambalajlar.</p>
-            <a href="#contact" class="card-link"><span data-i18n="products.link">Teklif İste</span><i class="arrow">→</i></a>
-          </article>
-
-          <article class="product-card tilt">
-            <div class="product-media media">
-              <img src="images/products/cappuccino-pouch.jpg" alt="Stand-up pouch — cappuccino ambalajı" loading="lazy" onerror="this.closest('.media').classList.add('no-img')">
-              <div class="product-icon">
-                <svg viewBox="0 0 24 24"><path d="M8 4h8l2 5v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9l2-5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M6 9h12" stroke="currentColor" stroke-width="1.5"/><path d="M9 4l.5-1.5h5L15 4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-              </div>
-            </div>
-            <h3 data-i18n="products.p4t">Stand-up Pouch</h3>
-            <p data-i18n="products.p4d">Raflarda dik duran, modern ve pratik kilitli ambalaj çözümleri.</p>
-            <a href="#contact" class="card-link"><span data-i18n="products.link">Teklif İste</span><i class="arrow">→</i></a>
-          </article>
-
-          <article class="product-card tilt">
-            <div class="product-media media">
-              <img src="images/products/milk-powder.jpg" alt="Süt tozu ambalajı ve polietilen filmi" loading="lazy" onerror="this.closest('.media').classList.add('no-img')">
-              <div class="product-icon">
-                <svg viewBox="0 0 24 24"><path d="M5.5 9.5 8 5h8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="m14 2.8 2.3 2.2L14 7.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 8.5 21 13l-3.5 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="m21.2 12.4-3.1.6.6 3.1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 21H4l2-5.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="m4.6 18.2 1.5-2.8 2.8 1.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-            </div>
-            <h3 data-i18n="products.p5t">Geri Dönüştürülmüş PE</h3>
-            <p data-i18n="products.p5d">Doğaya saygılı, geri dönüştürülmüş polietilenden üretilen sürdürülebilir ambalajlar.</p>
-            <a href="#contact" class="card-link"><span data-i18n="products.link">Teklif İste</span><i class="arrow">→</i></a>
-          </article>
-
-          <article class="product-card tilt">
-            <div class="product-media media">
-              <img src="images/products/aleppo-coffee.jpg" alt="Özel tasarım Halep kahvesi ambalajı" loading="lazy" onerror="this.closest('.media').classList.add('no-img')">
-              <div class="product-icon">
-                <svg viewBox="0 0 24 24"><path d="m14.5 4.5 5 5L8 21H3v-5L14.5 4.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="m12 7 5 5" stroke="currentColor" stroke-width="1.5"/><path d="M17.5 2.5 21.5 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-              </div>
-            </div>
-            <h3 data-i18n="products.p6t">Grafik Tasarım</h3>
-            <p data-i18n="products.p6d">Ambalajınızı rafta öne çıkaran profesyonel tasarım ve baskıya hazırlık hizmeti.</p>
-            <a href="#contact" class="card-link"><span data-i18n="products.link">Teklif İste</span><i class="arrow">→</i></a>
-          </article>
-        </div>
+    <!-- ============ STATS ============ -->
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat" data-anim><span class="stat-num"><span class="counter" data-count="10">0</span><i>+</i></span><span class="stat-label" data-i18n="stats.s1">Yıl Deneyim</span></div>
+        <div class="stat" data-anim><span class="stat-num"><span class="counter" data-count="15">0</span><i>+</i></span><span class="stat-label" data-i18n="stats.s2">Ürün Kategorisi</span></div>
+        <div class="stat" data-anim><span class="stat-num"><span class="counter" data-count="3">0</span></span><span class="stat-label" data-i18n="stats.s3">Kıtaya İhracat</span></div>
+        <div class="stat" data-anim><span class="stat-num"><i>%</i><span class="counter" data-count="100">0</span></span><span class="stat-label" data-i18n="stats.s4">Müşteriye Özel</span></div>
       </div>
     </section>
 
-    <!-- ============ SÜRDÜRÜLEBİLİRLİK + RAKAMLAR ============ -->
-    <section class="sust section" id="sustainability">
-      <svg class="sust-leaf-bg" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2C8 8 4 16 8 24c4 8 16 6 20-2C24 26 12 26 16 2z"/></svg>
-
-      <div class="container">
-        <div class="sust-head">
-          <p class="kicker kicker-light reveal"><span class="kicker-dot"></span><span data-i18n="sust.kicker">Sürdürülebilirlik</span></p>
-          <h2 class="section-title reveal">
-            <span data-i18n="sust.title1">Gezegen için</span>
-            <em data-i18n="sust.title2">üretiyoruz</em>
-          </h2>
-          <p class="lead reveal" data-i18n="sust.p">Doğa dostu üretim bizim için bir slogan değil, üretim hattımızın her adımında uyguladığımız bir ilkedir. Geri dönüştürülmüş hammaddeyi ekonomiye kazandırıyor, atığı kaynağında azaltıyoruz.</p>
-        </div>
-
-        <div class="sust-features">
-          <div class="sust-feature reveal">
-            <svg viewBox="0 0 24 24" class="ic"><path d="M5.5 9.5 8 5h8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="m14 2.8 2.3 2.2L14 7.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 8.5 21 13l-3.5 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 21H4l2-5.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <h3 data-i18n="sust.f1t">Geri Dönüştürülmüş Hammadde</h3>
-            <p data-i18n="sust.f1d">Polietilen atıkları yeniden işleyerek döngüsel ekonomiye katkı sağlıyoruz.</p>
-          </div>
-          <div class="sust-feature reveal">
-            <svg viewBox="0 0 24 24" class="ic"><path d="M12 21C7 16 4 12.5 7 8c2-3 7-3 9 0 .8-2 3-3 5-2-1 6-4 10-9 15Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-            <h3 data-i18n="sust.f2t">Doğa Dostu Üretim</h3>
-            <p data-i18n="sust.f2d">Üretim süreçlerimizi çevresel etkiyi en aza indirecek şekilde tasarlıyoruz.</p>
-          </div>
-          <div class="sust-feature reveal">
-            <svg viewBox="0 0 24 24" class="ic"><path d="M4 6h16M7 6V4.5A1.5 1.5 0 0 1 8.5 3h7A1.5 1.5 0 0 1 17 4.5V6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="m6 6 1 14a1.5 1.5 0 0 0 1.5 1.4h7A1.5 1.5 0 0 0 17 20l1-14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M10 10.5v6M14 10.5v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            <h3 data-i18n="sust.f3t">Atık Azaltma</h3>
-            <p data-i18n="sust.f3d">Verimli kesim ve planlama ile fireyi kaynağında önlüyoruz.</p>
-          </div>
-        </div>
-
-        <div class="stats" id="stats">
-          <div class="stat reveal">
-            <span class="stat-num"><span class="counter" data-count="10">0</span>+</span>
-            <span class="stat-label" data-i18n="stats.s1">Yıl Deneyim</span>
-          </div>
-          <div class="stat reveal">
-            <span class="stat-num"><span class="counter" data-count="6">0</span></span>
-            <span class="stat-label" data-i18n="stats.s2">Ürün Grubu</span>
-          </div>
-          <div class="stat reveal">
-            <span class="stat-num"><span class="counter" data-count="3">0</span></span>
-            <span class="stat-label" data-i18n="stats.s3">Dilde Hizmet</span>
-          </div>
-          <div class="stat reveal">
-            <span class="stat-num">%<span class="counter" data-count="100">0</span></span>
-            <span class="stat-label" data-i18n="stats.s4">Geri Dönüştürülebilir Hedef</span>
-          </div>
-        </div>
+    <!-- ============ QUALITY (koyu mor) ============ -->
+    <section class="quality">
+      <div class="container quality-inner">
+        <p class="kicker kicker-light" data-anim><span class="dot"></span><span data-i18n="quality.kicker">Kalite & Sürdürülebilirlik</span></p>
+        <h2 class="h-sec quality-title" data-anim data-i18n="quality.title">Uluslararası standart, çevreci vicdan</h2>
+        <p class="quality-p" data-anim data-i18n="quality.p">Doğa dostu üretim bir slogan değil, bir ilkedir.</p>
       </div>
     </section>
 
-    <!-- ============ SÜREÇ ============ -->
-    <section class="process section section-alt" id="process">
+    <!-- ============ PROCESS ============ -->
+    <section class="process" id="process">
       <div class="container">
-        <div class="section-head">
-          <p class="kicker reveal"><span class="kicker-dot"></span><span data-i18n="process.kicker">Nasıl Çalışıyoruz</span></p>
-          <h2 class="section-title reveal">
-            <span data-i18n="process.title1">Fikirden teslimata</span>
-            <em data-i18n="process.title2">dört adım</em>
-          </h2>
+        <div class="sec-head">
+          <p class="kicker" data-anim><span class="dot"></span><span data-i18n="process.kicker">Nasıl Çalışıyoruz</span></p>
+          <h2 class="h-sec" data-anim data-i18n="process.title">Fikirden teslimata, dört adım</h2>
         </div>
-
         <div class="steps">
-          <span class="steps-line" aria-hidden="true"><span class="steps-line-fill"></span></span>
-
-          <div class="step reveal">
-            <span class="step-num">01</span>
-            <h3 data-i18n="process.st1">Tasarım</h3>
-            <p data-i18n="process.sd1">Grafik ekibimiz markanıza özel ambalaj tasarımını hazırlar ve onayınıza sunar.</p>
-          </div>
-          <div class="step reveal">
-            <span class="step-num">02</span>
-            <h3 data-i18n="process.st2">Üretim</h3>
-            <p data-i18n="process.sd2">Modern makine parkurumuzda polietilen film istenen ölçü ve özellikte üretilir.</p>
-          </div>
-          <div class="step reveal">
-            <span class="step-num">03</span>
-            <h3 data-i18n="process.st3">Baskı</h3>
-            <p data-i18n="process.sd3">Yüksek çözünürlüklü baskı teknolojisiyle tasarım ambalaja kusursuz aktarılır.</p>
-          </div>
-          <div class="step reveal">
-            <span class="step-num">04</span>
-            <h3 data-i18n="process.st4">Teslimat</h3>
-            <p data-i18n="process.sd4">Siparişiniz özenle paketlenir ve zamanında adresinize ulaştırılır.</p>
-          </div>
+          <div class="step" data-anim><span class="step-num">01</span><h3 data-i18n="process.s1t">Tasarım</h3><p data-i18n="process.s1d">…</p></div>
+          <div class="step" data-anim><span class="step-num">02</span><h3 data-i18n="process.s2t">Üretim</h3><p data-i18n="process.s2d">…</p></div>
+          <div class="step" data-anim><span class="step-num">03</span><h3 data-i18n="process.s3t">Baskı</h3><p data-i18n="process.s3d">…</p></div>
+          <div class="step" data-anim><span class="step-num">04</span><h3 data-i18n="process.s4t">Teslimat</h3><p data-i18n="process.s4d">…</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ============ İLETİŞİM / TEKLİF ============ -->
-    <section class="contact section" id="contact">
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
       <div class="container contact-grid">
-        <div class="contact-info reveal">
-          <p class="kicker kicker-light"><span class="kicker-dot"></span><span data-i18n="contact.kicker">İletişim</span></p>
-          <h2 class="section-title">
-            <span data-i18n="contact.title1">Projenizi</span>
-            <em data-i18n="contact.title2">konuşalım</em>
-          </h2>
-          <p class="lead" data-i18n="contact.p">Ürünleriniz için en doğru ambalaj çözümünü birlikte belirleyelim. Formu doldurun, en kısa sürede size dönelim.</p>
+        <div class="contact-info" data-anim>
+          <p class="kicker kicker-light"><span class="dot"></span><span data-i18n="contact.kicker">Başlayalım</span></p>
+          <h2 class="h-sec contact-title" data-i18n="contact.title">Projenizi konuşalım</h2>
+          <p class="contact-sub" data-i18n="contact.sub">Formu doldurun, en kısa sürede dönelim.</p>
 
           <ul class="contact-list">
             <li>
@@ -432,33 +267,21 @@
           <div class="socials">
             <span class="contact-label" data-i18n="contact.followL">Bizi Takip Edin</span>
             <div class="social-row">
-              <a href="https://www.instagram.com/affuraplast.tr" target="_blank" rel="noopener" aria-label="Instagram">
-                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg>
-              </a>
-              <a href="https://www.facebook.com/affuraplast.tr" target="_blank" rel="noopener" aria-label="Facebook">
-                <svg viewBox="0 0 24 24"><path d="M14 8.5V7a1.5 1.5 0 0 1 1.5-1.5H17V2.8h-2.3A4.2 4.2 0 0 0 10.5 7v1.5H8V12h2.5v9.2H14V12h2.5l.5-3.5H14Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-              </a>
+              <a href="https://www.instagram.com/affuraplast.tr" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg></a>
+              <a href="https://www.facebook.com/affuraplast.tr" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8.5V7a1.5 1.5 0 0 1 1.5-1.5H17V2.8h-2.3A4.2 4.2 0 0 0 10.5 7v1.5H8V12h2.5v9.2H14V12h2.5l.5-3.5H14Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></a>
             </div>
           </div>
         </div>
 
-        <form class="contact-form reveal" id="quote-form" novalidate>
-          <div class="field">
-            <input type="text" id="f-name" name="name" required data-i18n-ph="contact.fName" placeholder="Adınız Soyadınız">
-          </div>
+        <form class="contact-form" id="quote-form" novalidate data-anim>
+          <div class="field"><input type="text" id="f-name" required data-i18n-ph="contact.fName" placeholder="Adınız"></div>
           <div class="field-row">
-            <div class="field">
-              <input type="email" id="f-email" name="email" required data-i18n-ph="contact.fEmail" placeholder="E-posta Adresiniz">
-            </div>
-            <div class="field">
-              <input type="tel" id="f-phone" name="phone" data-i18n-ph="contact.fPhone" placeholder="Telefon Numaranız">
-            </div>
+            <div class="field"><input type="email" id="f-email" required data-i18n-ph="contact.fEmail" placeholder="E-posta"></div>
+            <div class="field"><input type="tel" id="f-phone" data-i18n-ph="contact.fPhone" placeholder="Telefon"></div>
           </div>
-          <div class="field">
-            <textarea id="f-msg" name="message" rows="5" required data-i18n-ph="contact.fMsg" placeholder="Hangi ürünle ilgileniyorsunuz? Kısaca anlatın…"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-lg magnetic" data-i18n="contact.fSend">Teklif Talebi Gönder</button>
-          <p class="form-note" data-i18n="contact.fNote">Gönder'e bastığınızda e-posta uygulamanız açılır.</p>
+          <div class="field"><textarea id="f-msg" rows="5" required data-i18n-ph="contact.fMsg" placeholder="Mesaj"></textarea></div>
+          <button type="submit" class="btn btn-primary btn-lg" data-i18n="contact.fSend">Teklif Talebi Gönder</button>
+          <p class="form-note" data-i18n="contact.fNote">E-posta uygulamanız açılır.</p>
         </form>
       </div>
     </section>
@@ -468,37 +291,27 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <a href="#hero" class="logo">
-          <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2C8 8 4 16 8 24c4 8 16 6 20-2C24 26 12 26 16 2z"/></svg>
-          <span class="logo-word">Affura<em>Plast</em></span>
-        </a>
-        <p data-i18n="footer.tagline">Doğaya saygılı, uluslararası standartlarda ambalaj çözümleri.</p>
+        <a href="#hero" class="logo"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2C8 8 4 16 8 24c4 8 16 6 20-2C24 26 12 26 16 2z"/></svg><span class="logo-word"><span data-i18n="brand.p1">Affura</span><em data-i18n="brand.p2">Plast</em></span></a>
+        <p data-i18n="footer.tagline">Doğa dostu ambalaj çözümleri.</p>
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer.colNav">Bölümler</h4>
-        <a href="#about"          data-i18n="nav.about">Hakkımızda</a>
-        <a href="#products"       data-i18n="nav.products">Ürünlerimiz</a>
-        <a href="#sustainability" data-i18n="nav.sustainability">Sürdürülebilirlik</a>
-        <a href="#process"        data-i18n="nav.process">Süreç</a>
+        <a href="#products" data-i18n="nav.products">Ürünler</a>
+        <a href="#why" data-i18n="nav.why">Neden Biz</a>
+        <a href="#about" data-i18n="nav.about">Hakkımızda</a>
+        <a href="#process" data-i18n="nav.process">Süreç</a>
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer.colContact">İletişim</h4>
         <a href="tel:+905310321770"><span class="contact-name" data-i18n="contact.p1name">Yaman Bey</span> <bdi dir="ltr">+90 531 032 17 70</bdi></a>
         <a href="tel:+905300604033"><span class="contact-name" data-i18n="contact.p2name">Baraa Bey</span> <bdi dir="ltr">+90 530 060 40 33</bdi></a>
         <a href="mailto:info@affuraplast.com">info@affuraplast.com</a>
-        <span data-i18n="contact.addrV">Gaziantep, Türkiye</span>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>© <span id="year">2026</span> Affura Plast — <span data-i18n="footer.rights">Tüm hakları saklıdır.</span></p>
-      </div>
-    </div>
+    <div class="footer-bottom"><div class="container"><p>© <span id="year">2026</span> <span data-i18n="footer.brand">Affura Plast</span> — <span data-i18n="footer.rights">Tüm hakları saklıdır.</span></p></div></div>
   </footer>
 
-  <button class="to-top" aria-label="Başa dön">
-    <svg viewBox="0 0 24 24"><path d="M12 19V5m0 0-6 6m6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
+  <button class="to-top" aria-label="top"><svg viewBox="0 0 24 24"><path d="M12 19V5m0 0-6 6m6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 
 </body>
 </html>
