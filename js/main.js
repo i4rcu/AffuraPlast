@@ -1,148 +1,112 @@
 /* ============================================================
-   Affura Plast v2 — etkileşim + hafif animasyon
-   Ağır kütüphane yok. IntersectionObserver reveal + sayaç.
-   prefers-reduced-motion'da tüm hareket kapanır.
+   Affura Plast v3 — etkileşim + hafif animasyon
+   IntersectionObserver reveal + sayaç + SSS akordeon. Ağır lib yok.
    ============================================================ */
 document.addEventListener("DOMContentLoaded", function () {
   "use strict";
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
+  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   var nav = document.querySelector(".nav");
   var burger = document.querySelector(".burger");
-  var menu = document.getElementById("mobileMenu");
-  var toTop = document.querySelector(".to-top");
-  var progress = document.querySelector(".scroll-progress span");
+  var mmenu = document.getElementById("mmenu");
+  var totop = document.querySelector(".totop");
+  var prog = document.querySelector(".sprog span");
 
-  /* ---------- Mobil menü ---------- */
   function closeMenu() {
-    menu.classList.remove("open");
-    burger.classList.remove("open");
-    burger.setAttribute("aria-expanded", "false");
-    menu.setAttribute("aria-hidden", "true");
+    mmenu.classList.remove("open"); burger.classList.remove("open");
+    burger.setAttribute("aria-expanded", "false"); mmenu.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
   }
   burger.addEventListener("click", function () {
-    var open = menu.classList.toggle("open");
-    burger.classList.toggle("open", open);
-    burger.setAttribute("aria-expanded", String(open));
-    menu.setAttribute("aria-hidden", String(!open));
-    document.body.style.overflow = open ? "hidden" : "";
+    var o = mmenu.classList.toggle("open");
+    burger.classList.toggle("open", o); burger.setAttribute("aria-expanded", String(o));
+    mmenu.setAttribute("aria-hidden", String(!o)); document.body.style.overflow = o ? "hidden" : "";
   });
 
-  /* ---------- Çapa linkleri (native smooth) ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     a.addEventListener("click", function (e) {
-      var id = a.getAttribute("href");
-      if (id.length < 2) return;
-      var el = document.querySelector(id);
-      if (!el) return;
-      e.preventDefault();
-      closeMenu();
+      var id = a.getAttribute("href"); if (id.length < 2) return;
+      var el = document.querySelector(id); if (!el) return;
+      e.preventDefault(); closeMenu();
       el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
     });
   });
 
-  /* ---------- Scroll durumu (rAF ile tekil) ---------- */
-  var maxScroll = 1;
-  function measure() { maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1); }
-  var ticking = false;
+  var max = 1;
+  function measure() { max = Math.max(document.documentElement.scrollHeight - innerHeight, 1); }
+  var tick = false;
   function onScroll() {
-    if (ticking) return;
-    ticking = true;
+    if (tick) return; tick = true;
     requestAnimationFrame(function () {
-      var y = window.scrollY || document.documentElement.scrollTop;
-      nav.classList.toggle("scrolled", y > 24);
-      toTop.classList.toggle("show", y > 640);
-      if (progress) progress.style.transform = "scaleX(" + Math.min(y / maxScroll, 1) + ")";
-      ticking = false;
+      var y = scrollY || document.documentElement.scrollTop;
+      nav.classList.toggle("scrolled", y > 22);
+      totop.classList.toggle("show", y > 640);
+      if (prog) prog.style.transform = "scaleX(" + Math.min(y / max, 1) + ")";
+      tick = false;
     });
   }
-  measure();
-  window.addEventListener("resize", measure, { passive: true });
-  window.addEventListener("load", measure);
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
+  measure(); addEventListener("resize", measure, { passive: true }); addEventListener("load", measure);
+  addEventListener("scroll", onScroll, { passive: true }); onScroll();
+  totop.addEventListener("click", function () { scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }); });
 
-  toTop.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }); });
-
-  /* ---------- Reveal animasyonları ---------- */
-  var animEls = document.querySelectorAll("[data-anim]");
+  /* reveal */
+  var els = document.querySelectorAll("[data-a]");
   if (reduce || !("IntersectionObserver" in window)) {
-    animEls.forEach(function (el) { el.classList.add("in"); });
+    els.forEach(function (el) { el.classList.add("in"); });
   } else {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) { entry.target.classList.add("in"); io.unobserve(entry.target); }
-      });
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
-    animEls.forEach(function (el) { io.observe(el); });
-
-    /* Hero her zaman görünür alandadır; maskelenmiş başlık satırları kendi
-       overflow:hidden kabıyla kırpıldığından IO tetiklenmez — elle aç. */
-    requestAnimationFrame(function () {
-      document.querySelectorAll(".hero [data-anim]").forEach(function (el) {
-        el.classList.add("in"); io.unobserve(el);
-      });
-    });
+    els.forEach(function (el) { io.observe(el); });
+    requestAnimationFrame(function () { document.querySelectorAll(".hero [data-a]").forEach(function (el) { el.classList.add("in"); io.unobserve(el); }); });
   }
 
-  /* ---------- Sayaçlar ---------- */
-  function runCounter(el) {
-    var target = parseInt(el.getAttribute("data-count"), 10) || 0;
-    if (reduce) { el.textContent = String(target); return; }
-    var start = null, dur = 1500;
-    function step(ts) {
-      if (start === null) start = ts;
-      var p = Math.min((ts - start) / dur, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = String(Math.round(target * eased));
-      if (p < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
+  /* counters */
+  function run(el) {
+    var to = +el.getAttribute("data-c") || 0;
+    if (reduce) { el.textContent = String(to); return; }
+    var s = null;
+    function f(t) { if (s === null) s = t; var p = Math.min((t - s) / 1500, 1); el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(f); }
+    requestAnimationFrame(f);
   }
-  var counters = document.querySelectorAll(".counter");
+  var cts = document.querySelectorAll(".ct");
   if (reduce || !("IntersectionObserver" in window)) {
-    counters.forEach(function (el) { el.textContent = el.getAttribute("data-count") || "0"; });
+    cts.forEach(function (el) { el.textContent = el.getAttribute("data-c") || "0"; });
   } else {
-    var cio = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) { runCounter(entry.target); cio.unobserve(entry.target); }
-      });
+    var cio = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { run(e.target); cio.unobserve(e.target); } });
     }, { threshold: 0.6 });
-    counters.forEach(function (el) { cio.observe(el); });
+    cts.forEach(function (el) { cio.observe(el); });
   }
 
-  /* ---------- Aktif bölüm (scroll-spy) ---------- */
-  var navLinks = document.querySelectorAll(".nav-links a");
-  if ("IntersectionObserver" in window && navLinks.length) {
-    var spy = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        var id = "#" + entry.target.id;
-        navLinks.forEach(function (l) { l.classList.toggle("active", l.getAttribute("href") === id); });
+  /* FAQ — tek seferde bir açık */
+  var qas = document.querySelectorAll(".qa");
+  qas.forEach(function (d) {
+    d.addEventListener("toggle", function () {
+      if (d.open) qas.forEach(function (o) { if (o !== d) o.open = false; });
+    });
+  });
+
+  /* scroll-spy */
+  var links = document.querySelectorAll(".nav-l a");
+  if ("IntersectionObserver" in window && links.length) {
+    var spy = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return; var id = "#" + e.target.id;
+        links.forEach(function (l) { l.classList.toggle("active", l.getAttribute("href") === id); });
       });
     }, { rootMargin: "-45% 0px -50% 0px" });
     document.querySelectorAll("main section[id]").forEach(function (s) { spy.observe(s); });
   }
 
-  /* ---------- Yıl ---------- */
-  var yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+  var yEl = document.getElementById("year"); if (yEl) yEl.textContent = String(new Date().getFullYear());
 
-  /* ---------- Teklif formu (mailto) ---------- */
   var form = document.getElementById("quote-form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var lang = document.documentElement.lang || "ar";
-      var dict = (window.I18N && I18N[lang]) ? I18N[lang] : I18N.ar;
-      var name = document.getElementById("f-name").value.trim();
-      var email = document.getElementById("f-email").value.trim();
-      var phone = document.getElementById("f-phone").value.trim();
-      var msg = document.getElementById("f-msg").value.trim();
-      var body = name + "\n" + email + (phone ? "\n" + phone : "") + "\n\n" + msg;
-      window.location.href = "mailto:info@affuraplast.com?subject=" +
-        encodeURIComponent(dict.contact.mailSubject) + "&body=" + encodeURIComponent(body);
-    });
-  }
+  if (form) form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var lang = document.documentElement.lang || "ar";
+    var d = (window.I18N && I18N[lang]) ? I18N[lang] : I18N.ar;
+    var v = function (id) { var n = document.getElementById(id); return n ? n.value.trim() : ""; };
+    var body = v("f-name") + "\n" + v("f-sector") + "\n" + v("f-email") + (v("f-phone") ? "\n" + v("f-phone") : "") + "\n\n" + v("f-msg");
+    location.href = "mailto:info@affuraplast.com?subject=" + encodeURIComponent(d.contact.mailSubject) + "&body=" + encodeURIComponent(body);
+  });
 });

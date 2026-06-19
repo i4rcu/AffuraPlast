@@ -1,263 +1,249 @@
 /* ============================================================
-   Affura Plast v2 — Üç dilli içerik (AR varsayılan / TR / EN)
-   Metin değiştirmek için yalnızca bu dosyayı düzenleyin.
+   Affura Plast v3 — Sektör Uzmanlığı · içerik (AR / TR / EN)
+   Tamamen yeni metin. Metin değiştirmek için bu dosyayı düzenleyin.
    ============================================================ */
-
 const I18N = {
   ar: {
-    meta: { title: "عفورة بلاست — ننتج التغليف لكل منتج" },
     dir: "rtl",
+    meta: { title: "عفورة بلاست — تغليفٌ يفهم قطاعك" },
     brand: { p1: "عفورة", p2: "بلاست" },
-    nav: { products: "المنتجات", why: "لماذا نحن", about: "من نحن", process: "مراحل العمل", contact: "اتصل بنا", cta: "اطلب عرض سعر" },
+    nav: { sectors: "القطاعات", solutions: "الحلول", options: "أنواع التغليف", faq: "الأسئلة", contact: "اتصل بنا", cta: "استشارة مجانية" },
     hero: {
-      kicker: "من غازي عنتاب إلى العالم · منذ 2016",
-      t1: "ننتج التغليف",
-      t2: "لِكل منتج",
-      sub: "من القهوة إلى الصلصات، ومن حليب البودرة إلى المخبوزات والمشروبات والأغذية المجمّدة — أياً كان قطاعك، ننتج التغليف المطبوع والمرن الذي تحتاجه علامتك، تحت سقف واحد.",
-      cta1: "اطلب عرض سعر",
-      cta2: "شاهد منتجاتنا",
-      scroll: "مرّر للأسفل"
+      kicker: "خبراء التغليف · غازي عنتاب · منذ 2016",
+      t1: "تغليفٌ",
+      t2: "يفهم قطاعك",
+      sub: "لكل قطاع تحدّياته: القهوة تحتاج حاجزاً للنكهة، المجمّدات مقاومةً للبرودة، الألبان حمايةً من الرطوبة. نحن نعرف الفرق — ونصنع العبوة المناسبة تماماً لمنتجك.",
+      cta1: "احصل على استشارة قطاعية",
+      cta2: "اكتشف قطاعك",
+      scroll: "مرّر"
     },
-    marquee: ["تغليف غذائي", "أكياس ستاند أب", "أكياس مطبوعة", "أفلام مرنة", "تصميم جرافيكي", "طباعة عالية الدقة"],
-    showcase: {
-      kicker: "ماذا ننتج",
-      title: "منتجات لا حصر لها، سقف واحد",
-      sub: "كل العبوات أدناه من إنتاج عفورة بلاست. اسحب لاستعراضها.",
-      items: ["قهوة تركية", "كيس إسبريسو", "أغذية مجمّدة", "صلصة وكاتشب", "حمص ومقبلات", "حليب بودرة", "مخبوزات", "عبوة مشروبات", "كيس خبز", "كابتشينو"],
-      note: "ومنتجك أيضاً يمكن أن يأخذ مكانه هنا."
+    marquee: ["قهوة", "ألبان", "مجمّدات", "صلصات", "مخبوزات", "توابل", "مشروبات", "مساحيق"],
+    sectors: {
+      kicker: "القطاعات التي نخدمها",
+      title: "لكل قطاع، عبوة تُتقن لغته",
+      sub: "اختر قطاعك — لكلٍّ منها متطلبات تغليف مختلفة نُتقنها.",
+      s1: "القهوة والمشروبات الساخنة", s1d: "حاجز للنكهة يحافظ على الرائحة طازجة.",
+      s2: "الألبان ومشتقاتها", s2d: "حماية من الرطوبة والضوء لإطالة الطزاجة.",
+      s3: "الأغذية المجمّدة", s3d: "أفلام مرنة تتحمّل التجميد دون تشقّق.",
+      s4: "الصلصات والكاتشب", s4d: "عبوات محكمة بفوهات دقيقة بلا تسرّب.",
+      s5: "المخبوزات والعجائن", s5d: "تغليف يحافظ على الطراوة ويعرض المنتج.",
+      s6: "التوابل والبقوليات", s6d: "إغلاق محكم يحبس النكهة والرائحة.",
+      s7: "المقبلات والمعلّبات", s7d: "عبوات عملية تحافظ على القوام واللون.",
+      s8: "المساحيق والسكر", s8d: "أكياس مانعة للرطوبة سهلة الصبّ."
+    },
+    solve: {
+      kicker: "خبرتنا في العمل",
+      title: "تحدّي كل قطاع… وحلّنا له",
+      c1t: "القهوة", c1p: "التحدّي: تسرّب الأكسجين يُفقد القهوة نكهتها بسرعة.", c1s: "الحل: أفلام حاجزة متعددة الطبقات مع صمام لتصريف الغازات.",
+      c2t: "الأغذية المجمّدة", c2p: "التحدّي: التشقّق والكسر تحت درجات التجميد.", c2s: "الحل: أفلام مرنة مقاومة للبرودة بإغلاق محكم متين.",
+      c3t: "الألبان", c3p: "التحدّي: الرطوبة والضوء يُفسدان الطزاجة.", c3s: "الحل: أكياس حاجزة معتمة بإغلاق سهل الاستخدام.",
+      c4t: "الصلصات", c4p: "التحدّي: التسرّب وصعوبة الاستخدام.", c4s: "الحل: عبوات ضغط محكمة بفوهات مصمّمة بدقة."
+    },
+    types: {
+      kicker: "أنواع التغليف والتقنيات",
+      title: "كل ما يحتاجه منتجك، تحت سقف واحد",
+      t1t: "أكياس ستاند أب", t1d: "تقف على الرف بإغلاق قابل لإعادة الفتح.",
+      t2t: "تغليف فلو-باك", t2d: "سريع واقتصادي للمنتجات المتسلسلة.",
+      t3t: "الأفلام الانكماشية", t3d: "لتجميع العبوات والعروض المتعددة.",
+      t4t: "التغليف المُصفّح", t4d: "طبقات تمنح متانة وحاجزاً للنكهة.",
+      t5t: "طباعة روتوغرافور", t5d: "ألوان غنية وتفاصيل دقيقة بكميات كبيرة.",
+      t6t: "أفلام قابلة للتدوير", t6d: "حماية عالية مع مسؤولية بيئية."
     },
     why: {
-      kicker: "لماذا عفورة بلاست",
-      title: "شريك تغليف متكامل، من الفكرة إلى الرف",
-      sub: "نتحكّم بكل خطوة بأنفسنا، فنضمن الجودة والسرعة والسعر التنافسي.",
-      f1t: "تصميم خاص بعلامتك",
-      f1d: "فريق جرافيك يحوّل فكرتك إلى تصميم تغليف جاهز للطباعة.",
-      f2t: "إنتاج تحت سقف واحد",
-      f2d: "أفلام بولي إيثيلين بالمقاسات والمواصفات التي تطلبها على خطوط حديثة.",
-      f3t: "طباعة عالية الدقة",
-      f3d: "ألوان نابضة وتفاصيل دقيقة تجعل عبوتك تتميّز على الرف.",
-      f4t: "صديق للبيئة",
-      f4d: "نعيد تدوير البولي إيثيلين ونقلّل الهدر من المصدر."
+      kicker: "لماذا الخبرة القطاعية",
+      title: "العبوة الخطأ تُكلّفك مبيعات. الصحيحة تحمي وتبيع.",
+      p: "اختيار التغليف ليس تفصيلاً ثانوياً — إنه يحمي منتجك على الرف، ويطيل عمره، ويصنع انطباع علامتك الأول. خبرتنا في القطاعات تضمن أنك تحصل على الخيار الصحيح من أول مرة.",
+      n1: "سنوات خبرة", n2: "قطاعات نخدمها", n3: "أنواع تغليف", n4: "حسب الطلب"
     },
-    about: {
-      kicker: "من نحن",
-      title: "نُنتج في غازي عنتاب منذ 2016",
-      p1: "منذ تأسيسها، أصبحت عفورة بلاست شريكاً موثوقاً في قطاع التغليف بفضل جودة منتجاتها وأسعارها التنافسية ووضع رضا العميل أولاً.",
-      p2: "نطوّر بنيتنا التقنية وكوادرنا باستمرار لنقدّم منتجات صديقة للبيئة تفوق التوقعات.",
-      missionT: "رسالتنا",
-      missionP: "تقديم منتجات مبتكرة وصديقة للبيئة تفوق توقعات العملاء عبر التطوير المستمر.",
-      visionT: "رؤيتنا",
-      visionP: "أن نكون مؤسسة رائدة في قطاع الطباعة والتغليف."
-    },
-    stats: { s1: "سنوات خبرة", s2: "فئات منتجات", s3: "قارات نخدمها", s4: "حسب الطلب" },
-    quality: {
-      kicker: "الجودة والاستدامة",
-      title: "معايير دولية، ضمير بيئي",
-      p: "الإنتاج الصديق للبيئة ليس شعاراً، بل مبدأ في كل خطوة من خط إنتاجنا. نعيد المواد المدوّرة إلى الاقتصاد ونقلّل الهدر، دون أي تنازل عن الجودة."
-    },
-    process: {
-      kicker: "كيف نعمل",
-      title: "من الفكرة إلى التسليم، أربع خطوات",
-      s1t: "التصميم", s1d: "نُعدّ تصميماً خاصاً بعلامتك ونعرضه لموافقتك.",
-      s2t: "الإنتاج", s2d: "نُنتج الفيلم بالمقاس والمواصفات على خطوطنا الحديثة.",
-      s3t: "الطباعة", s3d: "ننقل التصميم إلى العبوة بدقة عالية.",
-      s4t: "التسليم", s4d: "نُغلّف طلبك بعناية ويصل في موعده."
+    faq: {
+      kicker: "الأسئلة الشائعة",
+      title: "أسئلة قبل أن تبدأ",
+      q1: "ما الحدّ الأدنى للطلب؟", a1: "يعتمد على نوع التغليف والمقاس. تواصل معنا ونحدّد معك الأنسب لكميتك.",
+      q2: "كم يستغرق التنفيذ؟", a2: "بعد اعتماد التصميم يبدأ الإنتاج مباشرة، وتختلف المدّة حسب الكمية والمواصفات.",
+      q3: "هل تساعدون في التصميم؟", a3: "نعم، فريقنا يجهّز تصميماً جاهزاً للطباعة خاصاً بعلامتك التجارية.",
+      q4: "هل أحصل على عيّنة؟", a4: "نوفّر عيّنات لاعتماد الجودة والمواصفات قبل الإنتاج الكامل.",
+      q5: "هل العبوات آمنة غذائياً؟", a5: "نستخدم مواد متوافقة مع معايير سلامة الغذاء الدولية."
     },
     contact: {
       kicker: "لنبدأ",
-      title: "لنتحدث عن مشروعك",
-      sub: "لنحدّد معاً حل التغليف الأنسب لمنتجاتك. املأ النموذج وسنعاود الاتصال بك سريعاً.",
+      title: "احصل على استشارة قطاعية مجانية",
+      sub: "أخبرنا عن قطاعك ومنتجك، وسنقترح حلّ التغليف الأنسب لك.",
       phoneL: "الهاتف", mailL: "البريد الإلكتروني", addrL: "العنوان", addrV: "غازي عنتاب، تركيا", followL: "تابعنا",
       p1name: "السيد يمان", p2name: "السيد براء",
-      fName: "الاسم الكامل", fEmail: "البريد الإلكتروني", fPhone: "رقم الهاتف", fMsg: "ما المنتج الذي يهمّك؟ أخبرنا باختصار…",
-      fSend: "أرسل طلب عرض السعر", fNote: "سيُفتح تطبيق البريد لديك عند الضغط على إرسال.",
-      mailSubject: "طلب عرض سعر — موقع عفورة بلاست"
+      fName: "الاسم الكامل", fSector: "قطاعك (مثال: قهوة، ألبان…)", fEmail: "البريد الإلكتروني", fPhone: "رقم الهاتف", fMsg: "أخبرنا عن منتجك باختصار…",
+      fSend: "أرسل الطلب", fNote: "سيُفتح تطبيق البريد لديك عند الضغط على إرسال.",
+      mailSubject: "استشارة قطاعية — موقع عفورة بلاست"
     },
-    footer: { brand: "عفورة بلاست", tagline: "حلول تغليف صديقة للبيئة وفق المعايير الدولية.", colNav: "الأقسام", colContact: "اتصل بنا", rights: "جميع الحقوق محفوظة." }
+    footer: { brand: "عفورة بلاست", tagline: "خبراء التغليف لكل قطاع — من غازي عنتاب إلى العالم.", colNav: "الأقسام", colContact: "اتصل بنا", rights: "جميع الحقوق محفوظة." }
   },
 
   tr: {
-    meta: { title: "Affura Plast — Her Ürün İçin Ambalaj Üretiyoruz" },
     dir: "ltr",
+    meta: { title: "Affura Plast — Sektörünü Anlayan Ambalaj" },
     brand: { p1: "Affura", p2: "Plast" },
-    nav: { products: "Ürünler", why: "Neden Biz", about: "Hakkımızda", process: "Süreç", contact: "İletişim", cta: "Teklif Al" },
+    nav: { sectors: "Sektörler", solutions: "Çözümler", options: "Ambalaj Tipleri", faq: "S.S.S.", contact: "İletişim", cta: "Ücretsiz Danışmanlık" },
     hero: {
-      kicker: "Gaziantep'ten dünyaya · 2016'dan beri",
-      t1: "Her ürün için",
-      t2: "ambalaj üretiyoruz",
-      sub: "Kahveden soslara, süt tozundan unlu mamule, içecekten dondurulmuş gıdaya — hangi sektörde olursanız olun, markanızın ihtiyacı olan baskılı ve esnek ambalajı tek çatı altında üretiyoruz.",
-      cta1: "Teklif Alın",
-      cta2: "Ürünleri Gör",
-      scroll: "Aşağı kaydır"
+      kicker: "Ambalaj uzmanları · Gaziantep · 2016'dan beri",
+      t1: "Sektörünü",
+      t2: "anlayan ambalaj",
+      sub: "Her sektörün kendi zorluğu var: kahve aroma bariyeri ister, dondurulmuş ürün soğuk dayanımı, süt ürünü nem koruması. Farkı biliriz — ürününüze tam uygun ambalajı üretiriz.",
+      cta1: "Sektörel danışmanlık alın",
+      cta2: "Sektörünü keşfet",
+      scroll: "Kaydır"
     },
-    marquee: ["Gıda Ambalajı", "Stand-up Pouch", "Baskılı Poşet", "Esnek Filmler", "Grafik Tasarım", "Yüksek Çözünürlüklü Baskı"],
-    showcase: {
-      kicker: "Neler Üretiyoruz",
-      title: "Sınırsız ürün, tek çatı",
-      sub: "Aşağıdaki ambalajların tamamı Affura Plast üretimidir. İncelemek için kaydırın.",
-      items: ["Türk Kahvesi", "Espresso Pouch", "Dondurulmuş Gıda", "Sos & Ketçap", "Humus & Meze", "Süt Tozu", "Unlu Mamul", "İçecek Paketi", "Ekmek Poşeti", "Cappuccino"],
-      note: "Sizin ürününüz de burada yerini alabilir."
+    marquee: ["Kahve", "Süt Ürünleri", "Dondurulmuş", "Sos", "Unlu Mamul", "Baharat", "İçecek", "Toz Ürün"],
+    sectors: {
+      kicker: "Hizmet Verdiğimiz Sektörler",
+      title: "Her sektöre, dilini bilen bir ambalaj",
+      sub: "Sektörünüzü seçin — her birinin ambalaj ihtiyacı farklıdır, hepsini biliriz.",
+      s1: "Kahve & Sıcak İçecek", s1d: "Aromayı taze tutan bariyerli yapı.",
+      s2: "Süt Ürünleri", s2d: "Tazeliği uzatan nem ve ışık koruması.",
+      s3: "Dondurulmuş Gıda", s3d: "Donmaya çatlamadan dayanan esnek film.",
+      s4: "Sos & Ketçap", s4d: "Sızdırmaz, ince ağızlı pratik kaplar.",
+      s5: "Unlu Mamul", s5d: "Tazeliği koruyan, ürünü sergileyen ambalaj.",
+      s6: "Baharat & Bakliyat", s6d: "Aromayı hapseden sızdırmaz kapama.",
+      s7: "Meze & Konserve", s7d: "Kıvamı ve rengi koruyan pratik kaplar.",
+      s8: "Toz Ürün & Şeker", s8d: "Neme dayanıklı, kolay dökülen poşet."
+    },
+    solve: {
+      kicker: "Uzmanlığımız İş Başında",
+      title: "Her sektörün sorunu… ve çözümümüz",
+      c1t: "Kahve", c1p: "Sorun: Oksijen kaçağı kahvenin aromasını hızla bozar.", c1s: "Çözüm: Çok katmanlı bariyer film + gaz tahliye valfi.",
+      c2t: "Dondurulmuş Gıda", c2p: "Sorun: Dondurucu sıcaklıkta çatlama ve kırılma.", c2s: "Çözüm: Soğuğa dayanıklı esnek film, sağlam sızdırmaz kapama.",
+      c3t: "Süt Ürünleri", c3p: "Sorun: Nem ve ışık tazeliği bozar.", c3s: "Çözüm: Işık geçirmez bariyerli, kolay açılan poşet.",
+      c4t: "Soslar", c4p: "Sorun: Sızıntı ve kullanım zorluğu.", c4s: "Çözüm: Hassas ağızlı, sızdırmaz squeeze kaplar."
+    },
+    types: {
+      kicker: "Ambalaj Tipleri & Teknikler",
+      title: "Ürününüzün ihtiyacı, tek çatı altında",
+      t1t: "Stand-up Pouch", t1d: "Rafta dik durur, tekrar kapanabilir.",
+      t2t: "Flow-Wrap", t2d: "Seri ürünler için hızlı ve ekonomik.",
+      t3t: "Shrink Filmler", t3d: "Çoklu paket ve kampanyalar için.",
+      t4t: "Laminasyon", t4d: "Dayanıklılık ve aroma bariyeri katmanları.",
+      t5t: "Rotogravür Baskı", t5d: "Yüksek adetlerde zengin renk, keskin detay.",
+      t6t: "Geri Dönüştürülebilir Film", t6d: "Yüksek koruma + çevresel sorumluluk."
     },
     why: {
-      kicker: "Neden Affura Plast",
-      title: "Fikirden rafa, eksiksiz ambalaj ortağı",
-      sub: "Her adımı kendimiz kontrol ederiz; kaliteyi, hızı ve rekabetçi fiyatı böyle garanti ederiz.",
-      f1t: "Markanıza Özel Tasarım",
-      f1d: "Grafik ekibimiz fikrinizi baskıya hazır ambalaj tasarımına dönüştürür.",
-      f2t: "Tek Çatı Altında Üretim",
-      f2d: "İstediğiniz ölçü ve özellikte polietilen filmi modern hatlarda üretiriz.",
-      f3t: "Yüksek Çözünürlüklü Baskı",
-      f3d: "Canlı renkler ve keskin detaylarla ambalajınız rafta öne çıkar.",
-      f4t: "Doğa Dostu",
-      f4d: "Polietileni geri dönüştürür, atığı kaynağında azaltırız."
+      kicker: "Neden Sektör Uzmanlığı",
+      title: "Yanlış ambalaj satış kaybettirir. Doğrusu korur ve satar.",
+      p: "Ambalaj seçimi küçük bir ayrıntı değil — ürününüzü rafta korur, ömrünü uzatır ve markanızın ilk izlenimini yaratır. Sektörel deneyimimiz, doğru seçimi ilk seferde yapmanızı sağlar.",
+      n1: "Yıl Deneyim", n2: "Sektör", n3: "Ambalaj Tipi", n4: "Müşteriye Özel"
     },
-    about: {
-      kicker: "Hakkımızda",
-      title: "2016'dan beri Gaziantep'te üretiyoruz",
-      p1: "Affura Plast, kurulduğundan beri kaliteli ürünleri, rekabetçi fiyatları ve müşteri memnuniyetini merkeze alan yaklaşımıyla ambalaj sektöründe güvenilir bir çözüm ortağıdır.",
-      p2: "Teknolojik altyapımızı ve ekibimizi sürekli geliştirerek beklentilerin ötesinde çevre dostu ürünler sunuyoruz.",
-      missionT: "Misyonumuz",
-      missionP: "Sürekli gelişerek müşteri beklentilerini aşan, yenilikçi ve çevre dostu ürünler sunmak.",
-      visionT: "Vizyonumuz",
-      visionP: "Baskı ve ambalaj sektöründe öncü bir kuruluş olmak."
-    },
-    stats: { s1: "Yıl Deneyim", s2: "Ürün Kategorisi", s3: "Kıtaya İhracat", s4: "Müşteriye Özel" },
-    quality: {
-      kicker: "Kalite & Sürdürülebilirlik",
-      title: "Uluslararası standart, çevreci vicdan",
-      p: "Doğa dostu üretim bir slogan değil, üretim hattımızın her adımındaki bir ilkedir. Geri dönüştürülmüş hammaddeyi ekonomiye kazandırır, kaliteden ödün vermeden atığı azaltırız."
-    },
-    process: {
-      kicker: "Nasıl Çalışıyoruz",
-      title: "Fikirden teslimata, dört adım",
-      s1t: "Tasarım", s1d: "Markanıza özel tasarımı hazırlar ve onayınıza sunarız.",
-      s2t: "Üretim", s2d: "Filmi istenen ölçü ve özellikte modern hatlarda üretiriz.",
-      s3t: "Baskı", s3d: "Tasarımı ambalaja yüksek çözünürlükle aktarırız.",
-      s4t: "Teslimat", s4d: "Siparişiniz özenle paketlenir ve zamanında ulaşır."
+    faq: {
+      kicker: "Sık Sorulan Sorular",
+      title: "Başlamadan önce sorular",
+      q1: "Minimum sipariş nedir?", a1: "Ambalaj tipine ve ölçüye göre değişir. İletişime geçin, miktarınıza en uygununu birlikte belirleyelim.",
+      q2: "Üretim ne kadar sürer?", a2: "Tasarım onayından sonra üretim başlar; süre miktara ve özelliklere göre değişir.",
+      q3: "Tasarıma yardım ediyor musunuz?", a3: "Evet, ekibimiz markanıza özel baskıya hazır tasarımı hazırlar.",
+      q4: "Numune alabilir miyim?", a4: "Tam üretimden önce kalite ve özellik onayı için numune sağlarız.",
+      q5: "Ambalajlar gıdaya uygun mu?", a5: "Uluslararası gıda güvenliği standartlarına uygun malzemeler kullanırız."
     },
     contact: {
       kicker: "Başlayalım",
-      title: "Projenizi konuşalım",
-      sub: "Ürünleriniz için en doğru ambalaj çözümünü birlikte belirleyelim. Formu doldurun, en kısa sürede dönelim.",
+      title: "Ücretsiz sektörel danışmanlık alın",
+      sub: "Sektörünüzü ve ürününüzü anlatın, en uygun ambalaj çözümünü önerelim.",
       phoneL: "Telefon", mailL: "E-posta", addrL: "Adres", addrV: "Gaziantep, Türkiye", followL: "Bizi Takip Edin",
       p1name: "Yaman Bey", p2name: "Baraa Bey",
-      fName: "Adınız Soyadınız", fEmail: "E-posta Adresiniz", fPhone: "Telefon Numaranız", fMsg: "Hangi ürünle ilgileniyorsunuz? Kısaca anlatın…",
-      fSend: "Teklif Talebi Gönder", fNote: "Gönder'e bastığınızda e-posta uygulamanız açılır.",
-      mailSubject: "Teklif Talebi — Affura Plast Web Sitesi"
+      fName: "Adınız Soyadınız", fSector: "Sektörünüz (örn. kahve, süt…)", fEmail: "E-posta", fPhone: "Telefon", fMsg: "Ürününüzü kısaca anlatın…",
+      fSend: "Gönder", fNote: "Gönder'e bastığınızda e-posta uygulamanız açılır.",
+      mailSubject: "Sektörel Danışmanlık — Affura Plast"
     },
-    footer: { brand: "Affura Plast", tagline: "Doğa dostu, uluslararası standartlarda ambalaj çözümleri.", colNav: "Bölümler", colContact: "İletişim", rights: "Tüm hakları saklıdır." }
+    footer: { brand: "Affura Plast", tagline: "Her sektör için ambalaj uzmanı — Gaziantep'ten dünyaya.", colNav: "Bölümler", colContact: "İletişim", rights: "Tüm hakları saklıdır." }
   },
 
   en: {
-    meta: { title: "Affura Plast — We Produce Packaging for Every Product" },
     dir: "ltr",
+    meta: { title: "Affura Plast — Packaging That Understands Your Sector" },
     brand: { p1: "Affura", p2: "Plast" },
-    nav: { products: "Products", why: "Why Us", about: "About", process: "Process", contact: "Contact", cta: "Get a Quote" },
+    nav: { sectors: "Sectors", solutions: "Solutions", options: "Packaging Types", faq: "FAQ", contact: "Contact", cta: "Free Consultation" },
     hero: {
-      kicker: "From Gaziantep to the world · since 2016",
-      t1: "We produce packaging",
-      t2: "for every product",
-      sub: "From coffee to sauces, milk powder to bakery, beverages to frozen food — whatever your industry, we produce the printed and flexible packaging your brand needs, all under one roof.",
-      cta1: "Get a Quote",
-      cta2: "See Products",
-      scroll: "Scroll down"
+      kicker: "Packaging experts · Gaziantep · since 2016",
+      t1: "Packaging that",
+      t2: "understands your sector",
+      sub: "Every sector has its own challenge: coffee needs a flavour barrier, frozen food cold resistance, dairy moisture protection. We know the difference — and build the packaging that fits your product exactly.",
+      cta1: "Get a sector consultation",
+      cta2: "Find your sector",
+      scroll: "Scroll"
     },
-    marquee: ["Food Packaging", "Stand-up Pouch", "Printed Bags", "Flexible Films", "Graphic Design", "High-Res Printing"],
-    showcase: {
-      kicker: "What We Produce",
-      title: "Endless products, one roof",
-      sub: "Every package below is produced by Affura Plast. Swipe to explore.",
-      items: ["Turkish Coffee", "Espresso Pouch", "Frozen Food", "Sauce & Ketchup", "Hummus & Meze", "Milk Powder", "Bakery", "Beverage Pack", "Bread Bag", "Cappuccino"],
-      note: "Your product can take its place here too."
+    marquee: ["Coffee", "Dairy", "Frozen", "Sauces", "Bakery", "Spices", "Beverage", "Powders"],
+    sectors: {
+      kicker: "Sectors We Serve",
+      title: "For every sector, packaging that speaks its language",
+      sub: "Pick your sector — each has different packaging needs, and we know them all.",
+      s1: "Coffee & Hot Drinks", s1d: "A flavour barrier that keeps aroma fresh.",
+      s2: "Dairy", s2d: "Moisture and light protection for longer freshness.",
+      s3: "Frozen Food", s3d: "Flexible film that resists freezing without cracking.",
+      s4: "Sauces & Ketchup", s4d: "Leak-proof packs with precise nozzles.",
+      s5: "Bakery", s5d: "Packaging that keeps it fresh and shows the product.",
+      s6: "Spices & Legumes", s6d: "Tight seals that lock in aroma.",
+      s7: "Meze & Canned", s7d: "Practical packs that protect texture and colour.",
+      s8: "Powders & Sugar", s8d: "Moisture-proof, easy-pour bags."
+    },
+    solve: {
+      kicker: "Our Expertise at Work",
+      title: "Each sector's challenge… and our answer",
+      c1t: "Coffee", c1p: "Challenge: oxygen leak quickly ruins coffee's flavour.", c1s: "Answer: multi-layer barrier film with a degassing valve.",
+      c2t: "Frozen Food", c2p: "Challenge: cracking and breaking at freezer temperatures.", c2s: "Answer: cold-resistant flexible film with a strong leak-proof seal.",
+      c3t: "Dairy", c3p: "Challenge: moisture and light spoil freshness.", c3s: "Answer: opaque barrier bags with an easy-open seal.",
+      c4t: "Sauces", c4p: "Challenge: leakage and difficult use.", c4s: "Answer: leak-proof squeeze packs with precise nozzles."
+    },
+    types: {
+      kicker: "Packaging Types & Techniques",
+      title: "Everything your product needs, under one roof",
+      t1t: "Stand-up Pouch", t1d: "Stands on the shelf, resealable.",
+      t2t: "Flow-Wrap", t2d: "Fast and economical for serial products.",
+      t3t: "Shrink Films", t3d: "For multipacks and promotions.",
+      t4t: "Lamination", t4d: "Layers for durability and a flavour barrier.",
+      t5t: "Gravure Printing", t5d: "Rich colour, sharp detail at high volume.",
+      t6t: "Recyclable Films", t6d: "High protection with environmental responsibility."
     },
     why: {
-      kicker: "Why Affura Plast",
-      title: "A complete packaging partner, idea to shelf",
-      sub: "We control every step ourselves — that's how we guarantee quality, speed and a competitive price.",
-      f1t: "Design for Your Brand",
-      f1d: "Our graphics team turns your idea into print-ready packaging.",
-      f2t: "Production Under One Roof",
-      f2d: "Polyethylene films in the size and spec you need, on modern lines.",
-      f3t: "High-Resolution Printing",
-      f3d: "Vivid colours and sharp detail make your pack stand out on the shelf.",
-      f4t: "Eco-Friendly",
-      f4d: "We recycle polyethylene and cut waste at the source."
+      kicker: "Why Sector Expertise",
+      title: "The wrong pack costs you sales. The right one protects and sells.",
+      p: "Packaging isn't a minor detail — it protects your product on the shelf, extends its life, and forms your brand's first impression. Our sector experience makes sure you get the right choice the first time.",
+      n1: "Years of Experience", n2: "Sectors Served", n3: "Packaging Types", n4: "Made to Order"
     },
-    about: {
-      kicker: "About Us",
-      title: "Manufacturing in Gaziantep since 2016",
-      p1: "Since its foundation, Affura Plast has been a trusted partner in packaging, built on quality, competitive pricing and putting customer satisfaction first.",
-      p2: "By continuously developing our technology and team, we deliver eco-friendly products that exceed expectations.",
-      missionT: "Our Mission",
-      missionP: "To deliver innovative, eco-friendly products that exceed expectations through continuous improvement.",
-      visionT: "Our Vision",
-      visionP: "To be a leading organisation in the printing and packaging industry."
-    },
-    stats: { s1: "Years of Experience", s2: "Product Categories", s3: "Continents Served", s4: "Made to Order" },
-    quality: {
-      kicker: "Quality & Sustainability",
-      title: "International standards, an environmental conscience",
-      p: "Eco-friendly production isn't a slogan — it's a principle at every step of our line. We return recycled material to the economy and cut waste, with no compromise on quality."
-    },
-    process: {
-      kicker: "How We Work",
-      title: "Idea to delivery, in four steps",
-      s1t: "Design", s1d: "We prepare a design tailored to your brand for your approval.",
-      s2t: "Production", s2d: "We produce the film to your size and spec on modern lines.",
-      s3t: "Printing", s3d: "We transfer your design to the pack in high resolution.",
-      s4t: "Delivery", s4d: "Your order is carefully packed and arrives on time."
+    faq: {
+      kicker: "Frequently Asked",
+      title: "Questions before you start",
+      q1: "What's the minimum order?", a1: "It depends on the packaging type and size. Get in touch and we'll find the best fit for your volume.",
+      q2: "How long does production take?", a2: "Production starts after design approval; timing varies with quantity and specs.",
+      q3: "Do you help with design?", a3: "Yes, our team prepares print-ready packaging design for your brand.",
+      q4: "Can I get a sample?", a4: "We provide samples to approve quality and specs before full production.",
+      q5: "Is the packaging food-safe?", a5: "We use materials compliant with international food-safety standards."
     },
     contact: {
       kicker: "Let's Start",
-      title: "Let's talk about your project",
-      sub: "Let's find the right packaging solution for your products together. Fill in the form and we'll get back to you shortly.",
+      title: "Get a free sector consultation",
+      sub: "Tell us your sector and product, and we'll suggest the best packaging solution.",
       phoneL: "Phone", mailL: "E-mail", addrL: "Address", addrV: "Gaziantep, Türkiye", followL: "Follow Us",
       p1name: "Mr. Yaman", p2name: "Mr. Baraa",
-      fName: "Full Name", fEmail: "E-mail Address", fPhone: "Phone Number", fMsg: "Which product are you interested in? Tell us briefly…",
-      fSend: "Send Quote Request", fNote: "Your e-mail app opens when you press Send.",
-      mailSubject: "Quote Request — Affura Plast Website"
+      fName: "Full Name", fSector: "Your sector (e.g. coffee, dairy…)", fEmail: "E-mail", fPhone: "Phone", fMsg: "Tell us about your product briefly…",
+      fSend: "Send", fNote: "Your e-mail app opens when you press Send.",
+      mailSubject: "Sector Consultation — Affura Plast"
     },
-    footer: { brand: "Affura Plast", tagline: "Eco-friendly packaging solutions to international standards.", colNav: "Sections", colContact: "Contact", rights: "All rights reserved." }
+    footer: { brand: "Affura Plast", tagline: "Packaging experts for every sector — from Gaziantep to the world.", colNav: "Sections", colContact: "Contact", rights: "All rights reserved." }
   }
 };
 
-/* ---------- Dil mantığı ---------- */
-function getDict(lang) { return I18N[lang] || I18N.ar; }
-function resolveKey(dict, key) {
-  return key.split(".").reduce(function (o, k) { return (o && o[k] !== undefined) ? o[k] : undefined; }, dict);
+/* ---------- dil mantığı ---------- */
+function getDict(l){ return I18N[l] || I18N.ar; }
+function resolveKey(d,k){ return k.split(".").reduce(function(o,x){ return (o&&o[x]!==undefined)?o[x]:undefined; }, d); }
+function setLang(lang){
+  if(!I18N[lang]) lang="ar";
+  var d=getDict(lang);
+  document.querySelectorAll("[data-i18n]").forEach(function(el){ var v=resolveKey(d,el.getAttribute("data-i18n")); if(typeof v==="string") el.textContent=v; });
+  document.querySelectorAll("[data-i18n-ph]").forEach(function(el){ var v=resolveKey(d,el.getAttribute("data-i18n-ph")); if(typeof v==="string") el.setAttribute("placeholder",v); });
+  document.documentElement.lang=lang;
+  document.documentElement.dir=d.dir;
+  document.title=d.meta.title;
+  document.querySelectorAll(".lang-btn").forEach(function(b){ b.classList.toggle("active", b.getAttribute("data-lang")===lang); });
+  try{ localStorage.setItem("affura-lang",lang); }catch(e){}
 }
-
-function setLang(lang) {
-  if (!I18N[lang]) lang = "ar";
-  var dict = getDict(lang);
-
-  document.querySelectorAll("[data-i18n]").forEach(function (el) {
-    var v = resolveKey(dict, el.getAttribute("data-i18n"));
-    if (typeof v === "string") el.textContent = v;
-  });
-  document.querySelectorAll("[data-i18n-ph]").forEach(function (el) {
-    var v = resolveKey(dict, el.getAttribute("data-i18n-ph"));
-    if (typeof v === "string") el.setAttribute("placeholder", v);
-  });
-
-  document.documentElement.lang = lang;
-  document.documentElement.dir = dict.dir;
-  document.title = dict.meta.title;
-
-  document.querySelectorAll(".lang-btn").forEach(function (b) {
-    b.classList.toggle("active", b.getAttribute("data-lang") === lang);
-  });
-
-  try { localStorage.setItem("affura-lang", lang); } catch (e) {}
-
-  /* marquee + showcase başlıkları dizi olduğu için olay yayınla */
-  document.dispatchEvent(new CustomEvent("affura:lang", { detail: { lang: lang, dict: dict } }));
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  var saved = "ar";
-  try { saved = localStorage.getItem("affura-lang") || "ar"; } catch (e) {}
-  var urlLang = new URLSearchParams(window.location.search).get("lang");
-  if (urlLang && I18N[urlLang]) saved = urlLang;
+document.addEventListener("DOMContentLoaded",function(){
+  var saved="ar";
+  try{ saved=localStorage.getItem("affura-lang")||"ar"; }catch(e){}
+  var u=new URLSearchParams(location.search).get("lang");
+  if(u&&I18N[u]) saved=u;
   setLang(saved);
 });
