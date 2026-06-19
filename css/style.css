@@ -633,6 +633,7 @@ html[lang="ar"] .showcase-note { font-style: normal; }
 }
 html[lang="ar"] .contact-label { letter-spacing: 0; }
 .contact-list a, .contact-list li > span:not(.contact-label) { font-size: 17px; font-weight: 500; color: var(--white); width: fit-content; }
+.contact-name { font-weight: 700; color: var(--orchid); margin-inline-end: 8px; }
 .contact-list a { border-bottom: 1px solid transparent; transition: border-color 0.3s; }
 .contact-list a:hover { border-color: var(--orchid); }
 
