@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C · كينِتك — عفورة بلاست</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F1EFE8;--ink:#16140F;--mut:#797668;--ac:#5B2A9E}
+html{scroll-behavior:smooth}
+body{font-family:"Tajawal",sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.back{position:fixed;z-index:99;bottom:16px;inset-inline-start:16px;background:var(--ink);color:#fff;font-weight:700;font-size:12px;padding:9px 14px;border-radius:0}
+.nav{position:fixed;top:0;inset-inline:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(16px,5vw,46px);mix-blend-mode:multiply}
+.brand{font-weight:900;font-size:20px;letter-spacing:-.01em}
+.nav a.cta{font-size:13px;font-weight:800;border-bottom:3px solid var(--ac);padding-bottom:2px}
+/* HERO kinetic */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:90px clamp(16px,5vw,46px) 40px;position:relative}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:700;letter-spacing:.24em;color:var(--mut);margin-bottom:26px;opacity:0;animation:fd .8s .1s forwards}
+.eyebrow::before{content:"";width:46px;height:2px;background:var(--ink)}
+.big{font-weight:900;line-height:.92;letter-spacing:-.02em;font-size:clamp(54px,17vw,180px)}
+.big .ln{display:block;overflow:hidden}
+.big .ln span{display:inline-block;transform:translateY(105%);animation:rise 1s cubic-bezier(.16,1,.3,1) forwards}
+.big .ln:nth-child(1) span{animation-delay:.2s}
+.big .ln:nth-child(2) span{animation-delay:.36s}
+.big .out{color:transparent;-webkit-text-stroke:2px var(--ac)}
+@keyframes rise{to{transform:translateY(0)}}
+@keyframes fd{to{opacity:1}}
+.lead{margin-top:30px;max-width:48ch;color:var(--mut);font-size:clamp(15px,4vw,19px);line-height:1.7;opacity:0;animation:fd .9s .7s forwards}
+.actions{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:fd .9s .85s forwards}
+.b1{background:var(--ink);color:#fff;font-weight:800;padding:15px 28px}
+.b2{border:1.5px solid var(--ink);padding:15px 26px;font-weight:700}
+/* FILMSTRIP */
+.film{border-block:1px solid #00000018;padding:18px 0;overflow:hidden;white-space:nowrap;background:var(--ink)}
+.film .run{display:inline-flex;gap:14px;animation:run 26s linear infinite}
+.film img{height:clamp(120px,22vw,190px);width:auto;border-radius:0;object-fit:cover;filter:grayscale(.1)}
+@keyframes run{to{transform:translateX(50%)}}
+.film:hover .run{animation-play-state:paused}
+/* STATEMENT */
+.state{padding:clamp(70px,13vw,150px) clamp(16px,5vw,46px);max-width:1100px;margin:0 auto}
+.state .k{font-size:12px;letter-spacing:.22em;color:var(--ac);font-weight:800;margin-bottom:22px}
+.state h2{font-size:clamp(30px,6.5vw,64px);font-weight:900;line-height:1.12}
+.state h2 .w{display:inline-block;opacity:0;transform:translateY(26px);transition:opacity .6s,transform .6s}
+.state.in h2 .w{opacity:1;transform:none}
+.state h2 u{text-decoration:none;color:var(--ac)}
+/* PROCESS as numbered list */
+.steps{margin-top:50px;display:grid;gap:0;border-top:1px solid #00000018}
+.step{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:baseline;padding:22px 0;border-bottom:1px solid #00000018;opacity:0;transform:translateY(20px);transition:.6s}
+.steps.in .step{opacity:1;transform:none}
+.steps.in .step:nth-child(2){transition-delay:.08s}.steps.in .step:nth-child(3){transition-delay:.16s}.steps.in .step:nth-child(4){transition-delay:.24s}
+.step .nn{font-size:clamp(28px,6vw,46px);font-weight:900;color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+.step .tx h3{font-size:clamp(18px,4.5vw,24px);font-weight:800}.step .tx p{color:var(--mut);font-size:14px;margin-top:4px}
+/* STATS huge */
+.bn{display:grid;grid-template-columns:1fr 1fr;gap:30px 14px;padding:0 clamp(16px,5vw,46px) clamp(50px,8vw,90px);max-width:1100px;margin:0 auto;text-align:center}
+@media(min-width:760px){.bn{grid-template-columns:repeat(4,1fr)}}
+.bn .n{font-size:clamp(48px,12vw,96px);font-weight:900;line-height:1;color:transparent;-webkit-text-stroke:2px var(--ac)}
+.bn .lb{color:var(--mut);font-size:14px;margin-top:8px}
+/* CONTACT */
+.contact{background:var(--ink);color:#F1EFE8;padding:clamp(60px,10vw,120px) clamp(16px,5vw,46px);text-align:center}
+.contact h2{font-size:clamp(34px,8vw,80px);font-weight:900;line-height:1}
+.contact .b1{background:#fff;color:var(--ink);display:inline-block;margin-top:26px}
+.contact .rows{display:flex;gap:10px 28px;justify-content:center;flex-wrap:wrap;margin-top:30px;color:#b9b4a8;font-size:15px}
+.contact b{color:#fff}
+.foot{background:var(--ink);color:#79766a;text-align:center;font-size:13px;padding:0 0 26px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}.big .ln span{transform:none}.eyebrow,.lead,.actions{opacity:1!important}.state h2 .w,.steps .step{opacity:1;transform:none}}
+</style></head>
+<body>
+<a class="back" href="index.html">‹ الأشكال · C كينِتك</a>
+<nav class="nav"><div class="brand">عفورة بلاست</div><a class="cta" href="#c">اطلب عرض سعر</a></nav>
+
+<header class="hero">
+  <div class="eyebrow">منذ 2016 — غازي عنتاب</div>
+  <div class="big"><span class="ln"><span>ننتج التغليف</span></span><span class="ln"><span class="out">لكل منتج</span></span></div>
+  <p class="lead">من القهوة إلى الصلصات، ومن حليب البودرة إلى المخبوزات والمشروبات والأغذية المجمّدة — أياً كان قطاعك، ننتجه تحت سقف واحد.</p>
+  <div class="actions"><a class="b1" href="#c">اطلب عرض سعر</a><a class="b2" href="#film">شاهد المنتجات</a></div>
+</header>
+
+<div class="film" id="film"><div class="run">
+  <img src="../images/products/turkish-coffee.jpg" alt=""><img src="../images/products/espresso-pouch.jpg" alt=""><img src="../images/products/ketchup.jpg" alt=""><img src="../images/products/humus.jpg" alt=""><img src="../images/products/milk-powder.jpg" alt=""><img src="../images/products/frozen-corn.jpg" alt=""><img src="../images/products/cola-pack.jpg" alt=""><img src="../images/products/cappuccino-pouch.jpg" alt="">
+  <img src="../images/products/turkish-coffee.jpg" alt=""><img src="../images/products/espresso-pouch.jpg" alt=""><img src="../images/products/ketchup.jpg" alt=""><img src="../images/products/humus.jpg" alt=""><img src="../images/products/milk-powder.jpg" alt=""><img src="../images/products/frozen-corn.jpg" alt=""><img src="../images/products/cola-pack.jpg" alt=""><img src="../images/products/cappuccino-pouch.jpg" alt="">
+</div></div>
+
+<section class="state" id="state">
+  <div class="k">لماذا عفورة بلاست</div>
+  <h2><span class="w">شريك</span> <span class="w">تغليف</span> <span class="w"><u>متكامل،</u></span> <span class="w">من</span> <span class="w">الفكرة</span> <span class="w">إلى</span> <span class="w">الرف.</span></h2>
+  <div class="steps" id="steps">
+    <div class="step"><div class="nn">01</div><div class="tx"><h3>التصميم</h3><p>نُعدّ تصميماً خاصاً بعلامتك ونعرضه لموافقتك.</p></div></div>
+    <div class="step"><div class="nn">02</div><div class="tx"><h3>الإنتاج</h3><p>نُنتج الفيلم بالمقاس والمواصفات على خطوطنا الحديثة.</p></div></div>
+    <div class="step"><div class="nn">03</div><div class="tx"><h3>الطباعة</h3><p>ننقل التصميم إلى العبوة بدقة عالية.</p></div></div>
+    <div class="step"><div class="nn">04</div><div class="tx"><h3>التسليم</h3><p>نُغلّف طلبك بعناية ويصل في موعده.</p></div></div>
+  </div>
+</section>
+
+<section class="bn">
+  <div><div class="n"><span class="ct" data-to="10">0</span>+</div><div class="lb">سنوات خبرة</div></div>
+  <div><div class="n"><span class="ct" data-to="15">0</span>+</div><div class="lb">فئات منتجات</div></div>
+  <div><div class="n"><span class="ct" data-to="3">0</span></div><div class="lb">قارات نخدمها</div></div>
+  <div><div class="n">%<span class="ct" data-to="100">0</span></div><div class="lb">حسب الطلب</div></div>
+</section>
+
+<section class="contact" id="c">
+  <h2>لنصنع عبوتك القادمة</h2>
+  <a class="b1" href="mailto:info@affuraplast.com">اطلب عرض سعر</a>
+  <div class="rows"><span><b>السيد يمان</b> <bdi dir="ltr">+90 531 032 17 70</bdi></span><span><b>السيد براء</b> <bdi dir="ltr">+90 530 060 40 33</bdi></span><span><b>info@affuraplast.com</b></span></div>
+</section>
+<div class="foot">© <span id="y">2026</span> عفورة بلاست — جميع الحقوق محفوظة.</div>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+function rv(sel){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.25});document.querySelectorAll(sel).forEach(function(el){io.observe(el)})}
+rv('#state');rv('#steps');
+/* word stagger */
+document.querySelectorAll('#state .w').forEach(function(w,i){w.style.transitionDelay=(i*0.06)+'s'});
+/* counters */
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target,to=+el.dataset.to,s=null;function f(t){if(!s)s=t;var p=Math.min((t-s)/1400,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f);cio.unobserve(el)})},{threshold:.6});
+document.querySelectorAll('.ct').forEach(function(el){cio.observe(el)});
+</script>
+</body></html>

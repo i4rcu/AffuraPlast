@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A · سينمائي — عفورة بلاست</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#08070C;--ink:#F2EEF7;--mut:#9A92A8;--p:#9B5DE5;--p2:#C77DFF;--gold:#F0C66B}
+html{scroll-behavior:smooth}
+body{font-family:"Tajawal",sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.back{position:fixed;z-index:99;bottom:16px;inset-inline-start:16px;background:#fff;color:#000;font-weight:700;font-size:12px;padding:9px 14px;border-radius:30px}
+/* NAV */
+.nav{position:fixed;top:0;inset-inline:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(18px,5vw,54px);transition:.4s;mix-blend-mode:difference}
+.brand{font-weight:900;font-size:22px;color:#fff}
+.nav .lnk{display:none;gap:26px}.nav .lnk a{color:#fff;font-size:14px;font-weight:500}
+.cta{border:1px solid #ffffff55;color:#fff;padding:9px 18px;border-radius:30px;font-size:13px;font-weight:700}
+@media(min-width:860px){.nav .lnk{display:flex}}
+/* HERO */
+.hero{position:relative;height:100svh;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(18px,5vw,54px);overflow:hidden}
+.mesh{position:absolute;inset:-20%;z-index:0;filter:blur(60px);opacity:.65;
+  background:radial-gradient(40% 40% at 25% 30%,#9B5DE5aa,transparent 60%),radial-gradient(40% 40% at 80% 20%,#F0C66B66,transparent 60%),radial-gradient(50% 50% at 60% 85%,#5D3FD3aa,transparent 60%);
+  animation:mesh 16s ease-in-out infinite alternate}
+@keyframes mesh{0%{transform:translate(0,0) scale(1)}100%{transform:translate(-6%,4%) scale(1.15)}}
+.hgrain{position:absolute;inset:0;z-index:1;opacity:.5;background:radial-gradient(circle at 50% 50%,transparent 60%,#08070c 100%)}
+.hin{position:relative;z-index:2;max-width:1000px}
+.tagline{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.05em;margin-bottom:24px;opacity:0;animation:up .7s .1s forwards}
+.tagline i{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 14px var(--gold)}
+h1{font-size:clamp(48px,13vw,150px);line-height:.92;font-weight:900;letter-spacing:-.03em}
+h1 .l{display:block;overflow:hidden}
+h1 .l b{display:inline-block;font-weight:900;transform:translateY(110%);animation:rise 1s cubic-bezier(.16,1,.3,1) forwards}
+h1 .l:nth-child(1) b{animation-delay:.15s}
+h1 .l:nth-child(2) b{animation-delay:.32s;color:transparent;-webkit-text-stroke:1.5px var(--p2);background:linear-gradient(120deg,var(--p2),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-stroke:0}
+@keyframes rise{to{transform:translateY(0)}}
+.hsub{margin-top:26px;max-width:46ch;color:var(--mut);font-size:clamp(15px,4vw,20px);line-height:1.7;opacity:0;animation:up .8s .55s forwards}
+.hcta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:up .8s .7s forwards}
+.b1{background:linear-gradient(120deg,var(--p),var(--p2));color:#fff;font-weight:800;padding:16px 30px;border-radius:40px;box-shadow:0 14px 40px -12px #9b5de5aa}
+.b2{border:1px solid #ffffff44;color:#fff;padding:16px 28px;border-radius:40px;font-weight:600}
+@keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.scroll{position:absolute;bottom:22px;inset-inline-start:50%;transform:translateX(50%);font-size:12px;color:var(--mut);z-index:2;animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{50%{transform:translateX(50%) translateY(8px)}}
+/* MARQUEE */
+.mq{background:#fff;color:#08070c;padding:16px 0;overflow:hidden;white-space:nowrap}
+.mq .t{display:inline-block;animation:slide 22s linear infinite;font-weight:900;font-size:clamp(20px,4vw,30px)}
+.mq .t span{margin:0 26px}.mq .t i{color:var(--p)}
+@keyframes slide{to{transform:translateX(50%)}}
+/* HORIZONTAL PIN */
+.pin{position:relative;height:300vh}
+.pin .sticky{position:sticky;top:0;height:100svh;display:flex;align-items:center;overflow:hidden}
+.track{display:flex;gap:30px;padding-inline:clamp(18px,5vw,54px);will-change:transform}
+.phead{flex:0 0 auto;width:min(78vw,420px);display:flex;flex-direction:column;justify-content:center}
+.phead .k{color:var(--gold);font-weight:700;font-size:13px;margin-bottom:14px}
+.phead h2{font-size:clamp(34px,7vw,64px);font-weight:900;line-height:1.05}
+.phead p{color:var(--mut);margin-top:16px;font-size:16px;line-height:1.7}
+.card{flex:0 0 auto;width:min(72vw,360px);height:74vh;max-height:560px;border-radius:24px;overflow:hidden;position:relative;border:1px solid #ffffff14}
+.card img{width:100%;height:100%;object-fit:cover}
+.card figcaption{position:absolute;bottom:0;inset-inline:0;padding:40px 22px 22px;font-weight:800;font-size:19px;background:linear-gradient(transparent,#08070cf2)}
+/* STATS */
+.stats{padding:clamp(70px,12vw,140px) clamp(18px,5vw,54px);display:grid;grid-template-columns:1fr 1fr;gap:40px 20px;max-width:1100px;margin:0 auto;text-align:center}
+.stat .n{font-size:clamp(46px,11vw,90px);font-weight:900;background:linear-gradient(120deg,var(--p2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.stat .lb{color:var(--mut);margin-top:8px;font-size:14px}
+@media(min-width:760px){.stats{grid-template-columns:repeat(4,1fr)}}
+/* CONTACT */
+.contact{padding:clamp(60px,10vw,120px) clamp(18px,5vw,54px);text-align:center;position:relative;overflow:hidden}
+.contact .glow{position:absolute;width:60vw;height:60vw;border-radius:50%;background:radial-gradient(circle,#9b5de566,transparent 70%);top:-20%;inset-inline-start:20%;filter:blur(40px)}
+.contact h2{position:relative;font-size:clamp(34px,8vw,72px);font-weight:900;line-height:1.05}
+.contact .b1{margin-top:30px;display:inline-block}
+.cinfo{position:relative;margin-top:40px;display:flex;gap:30px;justify-content:center;flex-wrap:wrap;color:var(--mut);font-size:15px}
+.cinfo b{color:var(--ink)}
+.foot{border-top:1px solid #ffffff14;padding:26px;text-align:center;color:var(--mut);font-size:13px}
+[data-rv]{opacity:0;transform:translateY(40px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}[data-rv]{opacity:1;transform:none}.tagline,.hsub,.hcta{opacity:1!important}h1 .l b{transform:none!important}}
+</style></head>
+<body>
+<a class="back" href="index.html">‹ الأشكال · A سينمائي</a>
+<nav class="nav"><div class="brand">عفورة بلاست</div><div class="lnk"><a href="#work">المنتجات</a><a href="#stats">أرقام</a><a href="#contact">تواصل</a></div><a class="cta" href="#contact">اطلب عرض سعر</a></nav>
+
+<header class="hero">
+  <div class="mesh"></div><div class="hgrain"></div>
+  <div class="hin">
+    <div class="tagline"><i></i> منذ 2016 · غازي عنتاب — تركيا</div>
+    <h1><span class="l"><b>ننتج التغليف</b></span><span class="l"><b>لكل منتج</b></span></h1>
+    <p class="hsub">من القهوة إلى الصلصات، ومن حليب البودرة إلى المخبوزات والمشروبات والأغذية المجمّدة — أياً كان قطاعك، ننتجه تحت سقف واحد.</p>
+    <div class="hcta"><a class="b1" href="#contact">اطلب عرض سعر</a><a class="b2" href="#work">شاهد المنتجات</a></div>
+  </div>
+  <div class="scroll">مرّر ↓</div>
+</header>
+
+<div class="mq"><div class="t"><span>قهوة تركية</span><i>✦</i><span>أكياس ستاند أب</span><i>✦</i><span>أفلام مرنة</span><i>✦</i><span>طباعة عالية الدقة</span><i>✦</i><span>قهوة تركية</span><i>✦</i><span>أكياس ستاند أب</span><i>✦</i><span>أفلام مرنة</span><i>✦</i><span>طباعة عالية الدقة</span><i>✦</i></div></div>
+
+<section class="pin" id="work">
+  <div class="sticky"><div class="track" id="track">
+    <div class="phead"><div class="k">ماذا ننتج</div><h2>منتجات لا حصر لها، سقف واحد</h2><p>كل العبوات من إنتاج عفورة بلاست. اسحب لاستعراضها.</p></div>
+    <figure class="card"><img src="../images/products/turkish-coffee.jpg" alt=""><figcaption>قهوة تركية</figcaption></figure>
+    <figure class="card"><img src="../images/products/espresso-pouch.jpg" alt=""><figcaption>كيس إسبريسو</figcaption></figure>
+    <figure class="card"><img src="../images/products/frozen-corn.jpg" alt=""><figcaption>أغذية مجمّدة</figcaption></figure>
+    <figure class="card"><img src="../images/products/ketchup.jpg" alt=""><figcaption>صلصة وكاتشب</figcaption></figure>
+    <figure class="card"><img src="../images/products/humus.jpg" alt=""><figcaption>حمص ومقبلات</figcaption></figure>
+    <figure class="card"><img src="../images/products/milk-powder.jpg" alt=""><figcaption>حليب بودرة</figcaption></figure>
+  </div></div>
+</section>
+
+<section class="stats" id="stats">
+  <div class="stat" data-rv><div class="n"><span class="ct" data-to="10">0</span>+</div><div class="lb">سنوات خبرة</div></div>
+  <div class="stat" data-rv><div class="n"><span class="ct" data-to="15">0</span>+</div><div class="lb">فئات منتجات</div></div>
+  <div class="stat" data-rv><div class="n"><span class="ct" data-to="3">0</span></div><div class="lb">قارات نخدمها</div></div>
+  <div class="stat" data-rv><div class="n">%<span class="ct" data-to="100">0</span></div><div class="lb">حسب الطلب</div></div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="glow"></div>
+  <h2 data-rv>لنصنع عبوتك القادمة</h2>
+  <a class="b1" href="mailto:info@affuraplast.com" data-rv>اطلب عرض سعر</a>
+  <div class="cinfo" data-rv>
+    <span><b>السيد يمان</b> <bdi dir="ltr">+90 531 032 17 70</bdi></span>
+    <span><b>السيد براء</b> <bdi dir="ltr">+90 530 060 40 33</bdi></span>
+    <span><b>info@affuraplast.com</b></span>
+  </div>
+</section>
+<div class="foot">© <span id="y">2026</span> عفورة بلاست — جميع الحقوق محفوظة.</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* reveal */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.2});
+document.querySelectorAll('[data-rv]').forEach(function(el){io.observe(el)});
+/* counters */
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target,to=+el.dataset.to,s=null;function f(t){if(!s)s=t;var p=Math.min((t-s)/1400,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f);cio.unobserve(el)})},{threshold:.6});
+document.querySelectorAll('.ct').forEach(function(el){cio.observe(el)});
+/* horizontal pin via GSAP */
+if(window.gsap&&window.ScrollTrigger&&!reduce){
+  gsap.registerPlugin(ScrollTrigger);
+  var track=document.getElementById('track');
+  var dist=function(){return track.scrollWidth-window.innerWidth+ (window.innerWidth*0.1)};
+  gsap.to(track,{x:function(){return -dist()},ease:'none',
+    scrollTrigger:{trigger:'.pin',start:'top top',end:function(){return '+='+dist()},scrub:.6,invalidateOnRefresh:true}});
+}else{ /* reduced: make pin a normal horizontal scroll */
+  document.querySelector('.pin').style.height='auto';
+  var st=document.querySelector('.sticky');st.style.position='static';st.style.height='auto';st.style.overflowX='auto';
+}
+</script>
+</body></html>
