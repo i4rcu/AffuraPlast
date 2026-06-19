@@ -1,0 +1,36 @@
+/* TEMA 3 — Net Minimal (aydınlık, keskin, mono + ince mor) */
+:root{
+  --bg:#F5F3ED; --bg-2:#ECE9DF; --ink:#141414; --ink-soft:#5F5F59;
+  --accent:#6D1F8A; --accent-deep:#141414; --accent-bright:#6D1F8A;
+  --line:#0000001A; --white:#FFFFFF;
+}
+/* keskin köşeler (base'in html[dir] kurallarını da yenmek için !important) */
+.btn,.btn-lg,.btn-primary,.btn-line,
+.why-item,.mv-card,.sc-card,.contact-form,.contact-info,.about-media,
+.hero-img,.hero-img-main,.hero-img-mini,.social-row a,.lang-switch,.lang-btn,
+.contact-form input,.contact-form textarea{ border-radius:4px !important; }
+.media img,.about-media img,.sc-card img{ filter:grayscale(.14); }
+.kicker{ color:#141414; } .kicker .dot{ background:#6D1F8A; box-shadow:none; }
+.hero-title em{ color:#6D1F8A; }
+.h-sec em{ color:#6D1F8A; }
+.hero-blob{ display:none; }
+.btn-primary{ background:#141414; color:#fff; box-shadow:none; }
+.btn-primary:hover{ background:#000; color:#fff; }
+.btn-line{ border-color:#141414; color:#141414; }
+.nav.scrolled{ background:rgba(245,243,237,.93); box-shadow:0 1px 0 #00000016; }
+.marquee{ background:#141414; color:#EDEAE2; }
+.mq-group i{ color:#6D1F8A; }
+.why{ background:#ECE9DF; }
+.why-item{ background:#F5F3ED; border:1px solid #00000018; }
+.why-ic{ background:#6d1f8a14; color:#6D1F8A; }
+.stats{ background:#141414; }
+.stats .stat-num{ color:#fff; } .stats .stat-label{ color:#b9b4ab; }
+.quality{ background:#141414; }
+.quality::before{ display:none; }
+.quality-title em{ color:#C9A6E0; }
+.contact-info{ background:#141414; }
+.about-year{ background:#6D1F8A; color:#fff; }
+.sc-card figcaption{ background:linear-gradient(transparent,rgba(20,20,20,.85)); }
+.footer{ background:#141414; }
+.mobile-menu{ background:var(--bg); }
+.stat-num{ color:#141414; }

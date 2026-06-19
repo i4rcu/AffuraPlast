@@ -1,0 +1,37 @@
+/* TEMA 2 — Cesur Renk (CANLI mor + neon yeşil) */
+:root{
+  --bg:#5E1A7C; --bg-2:#6E2390; --ink:#FFFFFF; --ink-soft:#EAD9F2;
+  --accent:#D6FB5A; --accent-deep:#37094B; --accent-bright:#D6FB5A;
+  --line:#FFFFFF2E; --white:#6E2390;
+}
+body{ background:var(--bg); }
+.hero{ background:radial-gradient(120% 90% at 78% -10%,#8A2EB6,#4A1166); }
+.nav.scrolled{ background:rgba(74,17,102,.86); box-shadow:0 1px 0 #ffffff2e; }
+.media{ background:linear-gradient(150deg,#8A2EB6,#37094B); }
+.kicker{ color:#D6FB5A; } .kicker .dot{ background:#D6FB5A; box-shadow:0 0 0 4px #d6fb5a3a; }
+.hero-title em, .h-sec em{ color:#D6FB5A; }
+.hero-blob{ background:#D6FB5A; opacity:.95; }
+.btn-primary{ background:#D6FB5A; color:#2A0838; font-weight:900; box-shadow:0 12px 30px -10px #d6fb5a66; }
+.btn-primary:hover{ background:#c8ef44; color:#2A0838; }
+.btn-line{ border-color:#fff; color:#fff; }
+.marquee{ background:#D6FB5A; color:#2A0838; border-block:0; }
+.mq-group span{ color:#2A0838; } .mq-group i{ color:#6E2390; }
+.why{ background:#4A1166; }
+.why-item,.mv-card{ background:#6E2390; border-color:#ffffff2e; }
+.why-ic{ background:#d6fb5a26; color:#D6FB5A; }
+.mv-card h3{ color:#D6FB5A; }
+.stats{ background:#37094B; }
+.stat-num{ color:#D6FB5A; }
+.contact-info{ background:#37094B; }
+.contact-form{ background:#fff; border-color:#0000; }
+.contact-form input,.contact-form textarea{ background:#F4EEF7; border-color:transparent; color:#2A0838; }
+.contact-form input::placeholder,.contact-form textarea::placeholder{ color:#7c6a85; }
+.contact-form .form-note{ color:#6a5a72; }
+.quality{ background:#2A0838; }
+.quality::before{ background:radial-gradient(circle,#D6FB5A40,transparent 70%); }
+.about-year{ background:#D6FB5A; color:#2A0838; }
+.sc-card figcaption{ background:linear-gradient(transparent,rgba(20,6,30,.92)); }
+.footer{ background:#1F0630; }
+.mobile-menu{ background:var(--bg); }
+.lang-switch{ background:#ffffff1a; }
+.burger{ border-color:#ffffff44; } .burger span{ background:#fff; }

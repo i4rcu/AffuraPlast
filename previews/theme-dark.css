@@ -1,0 +1,30 @@
+/* TEMA 1 — Koyu Lüks (base style.css üzerine giydirme) */
+:root{
+  --bg:#0E0B12; --bg-2:#16121E; --ink:#F4EFF7; --ink-soft:#A99FB6;
+  --accent:#B16AD8; --accent-deep:#0A0710; --accent-bright:#E5B45F;
+  --line:#FFFFFF1A; --white:#16121E;
+}
+body{ background:var(--bg); }
+.nav.scrolled{ background:rgba(14,11,18,.82); box-shadow:0 1px 0 #ffffff14; }
+.media{ background:linear-gradient(150deg,#2a2233,#0e0b12); }
+.kicker{ color:#E5B45F; } .kicker .dot{ background:#E5B45F; box-shadow:0 0 0 4px #e5b45f22; }
+.hero-title em, .h-sec em{ color:#E5B45F; }
+.hero-blob{ background:linear-gradient(150deg,#B16AD8,#E5B45F); opacity:.22; }
+.btn-primary{ background:linear-gradient(135deg,#B16AD8,#7d3aa6); color:#fff; }
+.btn-line{ border-color:#ffffff33; color:var(--ink); }
+.why{ background:#100C16; }
+.why-item,.mv-card{ background:var(--bg-2); border-color:#ffffff14; }
+.stats{ background:#16121E; }
+.stat-num{ color:#E5B45F; }
+.contact-form{ background:var(--bg-2); border-color:#ffffff14; }
+.contact-form input,.contact-form textarea{ background:#0e0b12; border-color:#ffffff1f; color:var(--ink); }
+.contact-form input::placeholder,.contact-form textarea::placeholder{ color:#7a7186; }
+.contact-info{ background:#0A0710; }
+.quality{ background:#0A0710; }
+.quality::before{ background:radial-gradient(circle,#E5B45F40,transparent 70%); }
+.about-year{ background:#E5B45F; color:#1a1206; }
+.sc-card figcaption{ background:linear-gradient(transparent,rgba(8,6,12,.92)); }
+.footer{ background:#070509; }
+.mobile-menu{ background:var(--bg); }
+.lang-switch{ background:#ffffff0d; }
+.burger{ border-color:#ffffff2a; } .burger span{ background:var(--ink); }
