@@ -83,12 +83,21 @@ html[lang="ar"] .h2{line-height:1.18}
 .cform input::placeholder,.cform textarea::placeholder{color:#9a988c}.cform .btn{width:100%}
 @media(min-width:860px){.cgrid{grid-template-columns:1fr 1fr}}
 .foot{padding:26px;text-align:center;color:var(--mut);font-size:13px}
+.products{padding:clamp(60px,11vw,120px) 0;background:var(--bg2)}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.pcard{background:var(--bg);display:flex;flex-direction:column}
+.pim{aspect-ratio:1;background:#fff;display:grid;place-items:center;padding:12px;overflow:hidden}
+.pim img{width:100%;height:100%;object-fit:contain;transition:transform .5s}
+.pcard:hover .pim img{transform:scale(1.04)}
+.pcard h3{font-weight:800;font-size:clamp(13px,3.2vw,16px);padding:14px 14px 2px;line-height:1.3}
+.pcard .plink{color:var(--ac);font-weight:800;font-size:12px;padding:0 14px 16px;margin-top:auto}
+@media(min-width:720px){.pgrid{grid-template-columns:repeat(4,1fr)}}
 [data-r]{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}[data-r].in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}.big .ln span{transform:none}.eyebrow,.hbot{opacity:1!important}[data-r]{opacity:1;transform:none}}
 </style></head>
 <body>
 <a class="back" href="index.html">‹ التصاميم · C إديتوريال</a>
-<nav class="nav" id="nav"><div class="brand">عفورة<em>بلاست</em></div><div class="nlnk"><a href="#sec">القطاعات</a><a href="#solve">الحلول</a><a href="#types">الأنواع</a><a href="#faq">الأسئلة</a></div><a class="ncta" href="#contact">استشارة مجانية</a></nav>
+<nav class="nav" id="nav"><div class="brand">عفورة<em>بلاست</em></div><div class="nlnk"><a href="#sec">القطاعات</a><a href="#products">المنتجات</a><a href="#solve">الحلول</a><a href="#types">الأنواع</a><a href="#faq">الأسئلة</a></div><a class="ncta" href="#contact">استشارة مجانية</a></nav>
 
 <header class="hero"><div class="wrap">
   <div class="eyebrow">خبراء التغليف — غازي عنتاب — منذ 2016</div>
@@ -126,6 +135,24 @@ html[lang="ar"] .h2{line-height:1.18}
   <div class="trow" data-r><div class="t1"><span class="n">٠٤</span><h3>التغليف المُصفّح</h3></div><p>طبقات تمنح متانة وحاجزاً للنكهة.</p></div>
   <div class="trow" data-r><div class="t1"><span class="n">٠٥</span><h3>طباعة روتوغرافور</h3></div><p>ألوان غنية وتفاصيل دقيقة بكميات كبيرة.</p></div>
   <div class="trow" data-r><div class="t1"><span class="n">٠٦</span><h3>أفلام قابلة للتدوير</h3></div><p>حماية عالية مع مسؤولية بيئية.</p></div>
+</div></section>
+
+<section class="products" id="products"><div class="wrap">
+  <div class="head" data-r><div class="kick">كتالوج المنتجات</div><h2 class="h2">منتجاتنا</h2><p class="lead">نماذج من إنتاجنا الفعلي — لكل قطاع عبوته المناسبة.</p></div>
+  <div class="pgrid">
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/kahve.jpg" alt=""></div><h3>أكياس القهوة</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/kilitli.jpg" alt=""></div><h3>أكياس ستاند أب بسحّاب</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/bakliyat.jpg" alt=""></div><h3>بقوليات</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/cerezler.jpg" alt=""></div><h3>مكسّرات</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/cips.jpg" alt=""></div><h3>رقائق (شيبس)</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/biskuvi.jpg" alt=""></div><h3>بسكويت</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/sekerleme.jpg" alt=""></div><h3>حلويات</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/kuru-gida.jpg" alt=""></div><h3>أغذية جافة</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/dondurma-rulo.jpg" alt=""></div><h3>رول تغليف المثلجات</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/hijyen-rulo.jpg" alt=""></div><h3>رول تغليف النظافة والتعقيم</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/deterjan-rulo.jpg" alt=""></div><h3>رول تغليف مسحوق الغسيل</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/maske.jpg" alt=""></div><h3>تغليف الكمّامات</h3><span class="plink">اطلب عرض سعر ←</span></article>
+  </div>
 </div></section>
 
 <section class="why"><div class="wrap">
