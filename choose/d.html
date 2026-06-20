@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D · مور فاخر — عفورة بلاست</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;min-width:0}
+:root{--bg:#2A0A3A;--bg2:#37104A;--ink:#F6EEFA;--mut:#C4ABD6;--pur:#9D5BC4;--gold:#E2BC68;--line:#ffffff1f}
+html{scroll-behavior:smooth}body{font-family:"Tajawal",sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.8}
+a{color:inherit;text-decoration:none}.wrap{max-width:1200px;margin:0 auto;padding-inline:clamp(18px,5vw,64px)}
+.disp{font-family:"El Messiri",serif}
+.back{position:fixed;z-index:99;inset-block-end:16px;inset-inline-start:16px;background:var(--gold);color:#2a0a3a;font-weight:800;font-size:12px;padding:9px 14px;border-radius:30px}
+.h2{font-family:"El Messiri",serif;font-size:clamp(28px,5.6vw,52px);font-weight:700;line-height:1.25}
+.kick{display:inline-flex;align-items:center;gap:12px;color:var(--gold);font-weight:700;font-size:13px;letter-spacing:.12em;margin-bottom:18px}
+.kick::before{content:"";width:34px;height:1px;background:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 30px;font-weight:700;font-size:15px;min-height:54px;border-radius:2px;transition:.3s}
+.b1{background:linear-gradient(135deg,var(--gold),#caa24e);color:#2a0a3a;box-shadow:0 14px 34px -14px #e2bc6877}.b1:hover{transform:translateY(-2px)}
+.b2{border:1px solid var(--line);color:#fff}.b2:hover{border-color:var(--gold);color:var(--gold)}
+.nav{position:fixed;inset-block-start:0;inset-inline:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px clamp(18px,5vw,64px);transition:.4s}
+.nav.sc{background:#2a0a3acc;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.brand{font-family:"El Messiri",serif;font-weight:700;font-size:23px}.brand em{font-style:normal;color:var(--gold);margin-inline-start:.2em}
+.nlnk{display:none;gap:26px}.nlnk a{color:var(--mut);font-size:14px;font-weight:500}.nlnk a:hover{color:#fff}
+.ncta{border:1px solid var(--gold);color:var(--gold);padding:9px 18px;font-size:13px;font-weight:700;border-radius:2px}
+@media(min-width:920px){.nlnk{display:flex}}
+.hero{min-height:100svh;display:flex;align-items:center;padding:100px 0 60px;position:relative;overflow:hidden}
+.hglow{position:absolute;border-radius:50%;filter:blur(10px)}
+.g1{inset-block-start:-12%;inset-inline-end:-8%;width:60vw;max-width:640px;aspect-ratio:1;background:radial-gradient(circle,#9d5bc455,transparent 62%);animation:fl 10s ease-in-out infinite alternate}
+.g2{inset-block-end:-20%;inset-inline-start:-10%;width:50vw;max-width:520px;aspect-ratio:1;background:radial-gradient(circle,#e2bc6822,transparent 65%)}
+@keyframes fl{to{transform:translate(-5%,5%) scale(1.12)}}
+.hgrid{display:grid;gap:40px;align-items:center;position:relative;z-index:2;width:100%}
+.htag{display:inline-flex;gap:10px;align-items:center;color:var(--gold);font-weight:700;font-size:13px;letter-spacing:.08em;margin-bottom:24px;opacity:0;animation:u .7s .1s forwards}
+.htag i{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}
+h1{font-family:"El Messiri",serif;font-size:clamp(42px,11vw,96px);font-weight:700;line-height:1.12;letter-spacing:-.01em}
+h1 .g{color:var(--gold);background:linear-gradient(120deg,#e2bc68,#f4dca0);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hsub{margin:26px 0 34px;max-width:46ch;color:var(--mut);font-size:clamp(15px,4vw,19px);opacity:0;animation:u .8s .5s forwards}
+.hcta{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:u .8s .66s forwards}
+@keyframes u{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.hshot{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:4/3.4;border:1px solid var(--gold);box-shadow:0 40px 90px -40px #000;opacity:0;animation:u 1s .5s forwards}
+.hshot::after{content:"";position:absolute;inset:0;border:6px solid #2a0a3a;outline:1px solid var(--gold);outline-offset:-12px;pointer-events:none}
+.hshot img{width:100%;height:100%;object-fit:cover}
+@media(min-width:860px){.hgrid{grid-template-columns:1.1fr .9fr}h1{font-size:clamp(58px,6.6vw,96px)}}
+.sec{padding:clamp(64px,11vw,120px) 0}
+.head{max-width:760px;margin-bottom:clamp(34px,5vw,56px)}.head .lead{color:var(--mut);font-size:clamp(16px,2.2vw,19px);margin-top:14px}
+.gline{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 0 clamp(34px,5vw,52px)}
+.sgrid{display:grid;grid-template-columns:1fr;gap:14px}
+.scard{border:1px solid var(--line);border-radius:3px;padding:26px;background:#ffffff06;transition:.4s;display:flex;gap:18px;align-items:flex-start}
+.scard:hover{border-color:var(--gold);background:#ffffff0d}
+.scard .nn{font-family:"El Messiri",serif;color:var(--gold);font-size:20px;font-weight:700}
+.scard h3{font-family:"El Messiri",serif;font-size:clamp(18px,4vw,22px);font-weight:600;margin-bottom:4px}
+.scard p{color:var(--mut);font-size:14px}
+@media(min-width:760px){.sgrid{grid-template-columns:1fr 1fr}}
+@media(min-width:1080px){.sgrid{grid-template-columns:repeat(4,1fr)}.scard{flex-direction:column}}
+/* products */
+.products{padding:clamp(64px,11vw,120px) 0;background:var(--bg2)}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pcard{background:#fff;border-radius:3px;overflow:hidden;display:flex;flex-direction:column;border:1px solid transparent;transition:.4s;position:relative}
+.pcard::after{content:"";position:absolute;inset:8px;border:1px solid #e2bc6855;pointer-events:none;opacity:0;transition:.4s}
+.pcard:hover{transform:translateY(-5px);box-shadow:0 30px 50px -28px #000}.pcard:hover::after{opacity:1}
+.pim{aspect-ratio:1;background:#fff;display:grid;place-items:center;padding:12px;overflow:hidden}
+.pim img{width:100%;height:100%;object-fit:contain;transition:transform .5s}.pcard:hover .pim img{transform:scale(1.05)}
+.pcard h3{font-family:"El Messiri",serif;color:#2a0a3a;font-size:clamp(13px,3.2vw,16px);font-weight:600;padding:14px 14px 0}
+.plink{color:#9d5bc4;font-weight:700;font-size:12px;padding:6px 14px 16px;margin-top:auto}
+@media(min-width:760px){.pgrid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1080px){.pgrid{grid-template-columns:repeat(4,1fr)}}
+/* solve */
+.solve{padding:clamp(64px,11vw,120px) 0}
+.srow{display:grid;gap:22px;padding:30px 0;border-top:1px solid var(--line);align-items:center}
+.srow:first-of-type{border-top:1px solid var(--gold)}
+.srow .im{aspect-ratio:16/10;overflow:hidden;border-radius:3px;border:1px solid var(--line)}.srow .im img{width:100%;height:100%;object-fit:cover}
+.srow h3{font-family:"El Messiri",serif;font-size:clamp(22px,5vw,32px);font-weight:700;margin-bottom:12px}
+.srow .pp{color:var(--mut);border-inline-start:2px solid var(--line);padding-inline-start:14px;margin-bottom:12px}
+.srow .ss{color:var(--gold);font-weight:600;border-inline-start:2px solid var(--gold);padding-inline-start:14px}
+@media(min-width:860px){.srow{grid-template-columns:1fr 1.1fr}.srow:nth-child(even) .im{order:2}}
+/* types */
+.types{padding:clamp(64px,11vw,120px) 0;background:var(--bg2)}
+.tgrid{display:grid;grid-template-columns:1fr;gap:14px}
+.tc{border:1px solid var(--line);border-radius:3px;padding:26px;transition:.4s}.tc:hover{border-color:var(--gold)}
+.tc .n{font-family:"El Messiri",serif;color:var(--gold);font-weight:700}.tc h3{font-family:"El Messiri",serif;font-size:clamp(18px,4vw,22px);font-weight:600;margin:8px 0 6px}.tc p{color:var(--mut);font-size:14.5px}
+@media(min-width:760px){.tgrid{grid-template-columns:repeat(3,1fr)}}
+/* why */
+.why{padding:clamp(70px,12vw,140px) 0;text-align:center;position:relative;overflow:hidden}
+.why h2{max-width:20ch;margin:0 auto;font-size:clamp(28px,5.6vw,54px)}.why .p{color:var(--mut);max-width:60ch;margin:18px auto 0;font-size:clamp(16px,2.3vw,20px)}
+.bn{display:grid;grid-template-columns:1fr 1fr;gap:30px 16px;margin-top:clamp(44px,6vw,70px)}
+.bn .n{font-family:"El Messiri",serif;font-size:clamp(44px,11vw,84px);font-weight:700;color:var(--gold);line-height:1}.bn .l{color:var(--mut);font-size:14px;margin-top:6px}
+@media(min-width:760px){.bn{grid-template-columns:repeat(4,1fr)}}
+/* faq */
+.faq{padding:clamp(64px,11vw,120px) 0;background:var(--bg2)}
+.qa{border-bottom:1px solid var(--line)}.qa:first-of-type{border-top:1px solid var(--gold)}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;padding:22px 4px;font-family:"El Messiri",serif;font-weight:600;font-size:clamp(16px,3.6vw,21px)}
+.qa summary::-webkit-details-marker{display:none}.qa summary i{color:var(--gold);font-size:22px;transition:.3s}.qa[open] summary i{transform:rotate(45deg)}
+.qa p{padding:0 4px 22px;color:var(--mut);max-width:70ch}
+/* contact */
+.contact{padding:clamp(64px,11vw,120px) 0}
+.cgrid{display:grid;gap:20px}.cbox{border:1px solid var(--line);border-radius:3px;padding:clamp(26px,5vw,42px);background:#ffffff06}
+.cl{color:var(--gold);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;display:block;margin-bottom:4px}
+.crow{margin-bottom:16px}.crow b{color:var(--gold)}.crow a,.crow span{color:#fff;font-size:16px}
+.cform input,.cform textarea{width:100%;font:inherit;color:var(--ink);background:#ffffff0a;border:1px solid var(--line);border-radius:2px;padding:14px 16px;margin-bottom:12px;resize:vertical}
+.cform input::placeholder,.cform textarea::placeholder{color:#a78fb8}.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--gold)}.cform .btn{width:100%}
+@media(min-width:860px){.cgrid{grid-template-columns:1fr 1fr}}
+.foot{border-top:1px solid var(--line);padding:28px;text-align:center;color:var(--mut);font-size:13px}
+[data-r]{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}[data-r].in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}[data-r]{opacity:1;transform:none}.htag,.hsub,.hcta,.hshot{opacity:1!important}}
+</style></head>
+<body>
+<a class="back" href="index.html">‹ التصاميم · D فاخر</a>
+<nav class="nav" id="nav"><div class="brand">عفورة<em>بلاست</em></div><div class="nlnk"><a href="#sec">القطاعات</a><a href="#products">المنتجات</a><a href="#solve">الحلول</a><a href="#types">الأنواع</a><a href="#faq">الأسئلة</a></div><a class="ncta" href="#contact">استشارة مجانية</a></nav>
+
+<header class="hero"><span class="hglow g1"></span><span class="hglow g2"></span><div class="wrap hgrid">
+  <div>
+    <div class="htag"><i></i> خبراء التغليف · غازي عنتاب · منذ 2016</div>
+    <h1>تغليفٌ<br><span class="g">يفهم قطاعك</span></h1>
+    <p class="hsub">لكل قطاع تحدّياته: القهوة تحتاج حاجزاً للنكهة، المجمّدات مقاومةً للبرودة، الألبان حمايةً من الرطوبة. نحن نعرف الفرق — ونصنعه بإتقان.</p>
+    <div class="hcta"><a class="btn b1" href="#contact">احصل على استشارة قطاعية</a><a class="btn b2" href="#sec">اكتشف قطاعك</a></div>
+  </div>
+  <figure class="hshot"><img src="../images/products/turkish-coffee.jpg" alt=""></figure>
+</div></header>
+
+<section class="sec" id="sec"><div class="wrap">
+  <div class="head" data-r><div class="kick">القطاعات التي نخدمها</div><h2 class="h2 disp">لكل قطاع، عبوة تُتقن لغته</h2><p class="lead">خبرة قطاعية في كل تفصيل من عبوتك.</p></div>
+  <div class="gline"></div>
+  <div class="sgrid">
+    <div class="scard" data-r><span class="nn">٠١</span><div><h3>القهوة والمشروبات الساخنة</h3><p>حاجز للنكهة يحافظ على الرائحة طازجة.</p></div></div>
+    <div class="scard" data-r><span class="nn">٠٢</span><div><h3>الألبان ومشتقاتها</h3><p>حماية من الرطوبة والضوء لإطالة الطزاجة.</p></div></div>
+    <div class="scard" data-r><span class="nn">٠٣</span><div><h3>الأغذية المجمّدة</h3><p>أفلام مرنة تتحمّل التجميد دون تشقّق.</p></div></div>
+    <div class="scard" data-r><span class="nn">٠٤</span><div><h3>الصلصات والكاتشب</h3><p>عبوات محكمة بفوهات دقيقة بلا تسرّب.</p></div></div>
+    <div class="scard" data-r><span class="nn">٠٥</span><div><h3>المخبوزات والعجائن</h3><p>تغليف يحافظ على الطراوة ويعرض المنتج.</p></div></div>
+    <div class="scard" data-r><span class="nn">٠٦</span><div><h3>التوابل والبقوليات</h3><p>إغلاق محكم يحبس النكهة والرائحة.</p></div></div>
+    <div class="scard" data-r><span class="nn">٠٧</span><div><h3>المقبلات والمعلّبات</h3><p>عبوات عملية تحافظ على القوام واللون.</p></div></div>
+    <div class="scard" data-r><span class="nn">٠٨</span><div><h3>المساحيق والسكر</h3><p>أكياس مانعة للرطوبة سهلة الصبّ.</p></div></div>
+  </div>
+</div></section>
+
+<section class="products" id="products"><div class="wrap">
+  <div class="head" data-r><div class="kick">كتالوج المنتجات</div><h2 class="h2 disp">منتجاتنا</h2><p class="lead">نماذج من إنتاجنا الفعلي — لكل قطاع عبوته المناسبة.</p></div>
+  <div class="pgrid">
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/kahve.jpg" alt=""></div><h3>أكياس القهوة</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/kilitli.jpg" alt=""></div><h3>أكياس ستاند أب بسحّاب</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/bakliyat.jpg" alt=""></div><h3>بقوليات</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/cerezler.jpg" alt=""></div><h3>مكسّرات</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/cips.jpg" alt=""></div><h3>رقائق (شيبس)</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/biskuvi.jpg" alt=""></div><h3>بسكويت</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/sekerleme.jpg" alt=""></div><h3>حلويات</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/kuru-gida.jpg" alt=""></div><h3>أغذية جافة</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/dondurma-rulo.jpg" alt=""></div><h3>رول تغليف المثلجات</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/hijyen-rulo.jpg" alt=""></div><h3>رول تغليف النظافة والتعقيم</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/deterjan-rulo.jpg" alt=""></div><h3>رول تغليف مسحوق الغسيل</h3><span class="plink">اطلب عرض سعر ←</span></article>
+    <article class="pcard" data-r><div class="pim"><img src="../images/catalog/maske.jpg" alt=""></div><h3>تغليف الكمّامات</h3><span class="plink">اطلب عرض سعر ←</span></article>
+  </div>
+</div></section>
+
+<section class="solve" id="solve"><div class="wrap">
+  <div class="head" data-r><div class="kick">خبرتنا في العمل</div><h2 class="h2 disp">تحدّي كل قطاع… وحلّنا له</h2></div>
+  <div class="srow" data-r><figure class="im"><img src="../images/products/turkish-coffee.jpg" alt=""></figure><div><h3>القهوة</h3><p class="pp">التحدّي: تسرّب الأكسجين يُفقد القهوة نكهتها بسرعة.</p><p class="ss">الحل: أفلام حاجزة متعددة الطبقات مع صمام لتصريف الغازات.</p></div></div>
+  <div class="srow" data-r><figure class="im"><img src="../images/products/frozen-corn.jpg" alt=""></figure><div><h3>الأغذية المجمّدة</h3><p class="pp">التحدّي: التشقّق والكسر تحت درجات التجميد.</p><p class="ss">الحل: أفلام مرنة مقاومة للبرودة بإغلاق محكم متين.</p></div></div>
+  <div class="srow" data-r><figure class="im"><img src="../images/products/milk-powder.jpg" alt=""></figure><div><h3>الألبان</h3><p class="pp">التحدّي: الرطوبة والضوء يُفسدان الطزاجة.</p><p class="ss">الحل: أكياس حاجزة معتمة بإغلاق سهل الاستخدام.</p></div></div>
+  <div class="srow" data-r><figure class="im"><img src="../images/products/ketchup.jpg" alt=""></figure><div><h3>الصلصات</h3><p class="pp">التحدّي: التسرّب وصعوبة الاستخدام.</p><p class="ss">الحل: عبوات ضغط محكمة بفوهات مصمّمة بدقة.</p></div></div>
+</div></section>
+
+<section class="types" id="types"><div class="wrap">
+  <div class="head" data-r><div class="kick">أنواع التغليف والتقنيات</div><h2 class="h2 disp">كل ما يحتاجه منتجك، تحت سقف واحد</h2></div>
+  <div class="tgrid">
+    <div class="tc" data-r><div class="n">٠١</div><h3>أكياس ستاند أب</h3><p>تقف على الرف بإغلاق قابل لإعادة الفتح.</p></div>
+    <div class="tc" data-r><div class="n">٠٢</div><h3>تغليف فلو-باك</h3><p>سريع واقتصادي للمنتجات المتسلسلة.</p></div>
+    <div class="tc" data-r><div class="n">٠٣</div><h3>الأفلام الانكماشية</h3><p>لتجميع العبوات والعروض المتعددة.</p></div>
+    <div class="tc" data-r><div class="n">٠٤</div><h3>التغليف المُصفّح</h3><p>طبقات تمنح متانة وحاجزاً للنكهة.</p></div>
+    <div class="tc" data-r><div class="n">٠٥</div><h3>طباعة روتوغرافور</h3><p>ألوان غنية وتفاصيل دقيقة بكميات كبيرة.</p></div>
+    <div class="tc" data-r><div class="n">٠٦</div><h3>أفلام قابلة للتدوير</h3><p>حماية عالية مع مسؤولية بيئية.</p></div>
+  </div>
+</div></section>
+
+<section class="why"><span class="hglow g1" style="inset-block-start:-30%"></span><div class="wrap">
+  <div data-r><div class="kick" style="justify-content:center">لماذا الخبرة القطاعية</div><h2 class="h2 disp">العبوة الخطأ تُكلّفك مبيعات. الصحيحة تحمي وتبيع.</h2><p class="p">اختيار التغليف ليس تفصيلاً ثانوياً — إنه يحمي منتجك ويطيل عمره ويصنع انطباع علامتك الأول. خبرتنا القطاعية تضمن الخيار الصحيح من أول مرة.</p></div>
+  <div class="bn">
+    <div data-r><div class="n"><span class="c" data-to="10">0</span>+</div><div class="l">سنوات خبرة</div></div>
+    <div data-r><div class="n"><span class="c" data-to="8">0</span></div><div class="l">قطاعات نخدمها</div></div>
+    <div data-r><div class="n"><span class="c" data-to="15">0</span>+</div><div class="l">أنواع تغليف</div></div>
+    <div data-r><div class="n">%<span class="c" data-to="100">0</span></div><div class="l">حسب الطلب</div></div>
+  </div>
+</div></section>
+
+<section class="faq" id="faq"><div class="wrap">
+  <div class="head" data-r><div class="kick">الأسئلة الشائعة</div><h2 class="h2 disp">أسئلة قبل أن تبدأ</h2></div>
+  <details class="qa"><summary><span>ما الحدّ الأدنى للطلب؟</span><i>+</i></summary><p>يعتمد على نوع التغليف والمقاس. تواصل معنا ونحدّد معك الأنسب لكميتك.</p></details>
+  <details class="qa"><summary><span>كم يستغرق التنفيذ؟</span><i>+</i></summary><p>بعد اعتماد التصميم يبدأ الإنتاج مباشرة، وتختلف المدّة حسب الكمية والمواصفات.</p></details>
+  <details class="qa"><summary><span>هل تساعدون في التصميم؟</span><i>+</i></summary><p>نعم، فريقنا يجهّز تصميماً جاهزاً للطباعة خاصاً بعلامتك التجارية.</p></details>
+  <details class="qa"><summary><span>هل أحصل على عيّنة؟</span><i>+</i></summary><p>نوفّر عيّنات لاعتماد الجودة والمواصفات قبل الإنتاج الكامل.</p></details>
+  <details class="qa"><summary><span>هل العبوات آمنة غذائياً؟</span><i>+</i></summary><p>نستخدم مواد متوافقة مع معايير سلامة الغذاء الدولية.</p></details>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div class="head" data-r><div class="kick">لنبدأ</div><h2 class="h2 disp">احصل على استشارة قطاعية مجانية</h2></div>
+  <div class="cgrid">
+    <div class="cbox" data-r>
+      <div class="crow"><span class="cl">الهاتف</span><div><b>السيد يمان</b> <bdi dir="ltr">+90 531 032 17 70</bdi></div><div><b>السيد براء</b> <bdi dir="ltr">+90 530 060 40 33</bdi></div></div>
+      <div class="crow"><span class="cl">البريد الإلكتروني</span><a href="mailto:info@affuraplast.com">info@affuraplast.com</a></div>
+      <div class="crow"><span class="cl">العنوان</span><span>غازي عنتاب، تركيا</span></div>
+    </div>
+    <form class="cbox cform" data-r onsubmit="event.preventDefault();location.href='mailto:info@affuraplast.com?subject='+encodeURIComponent('استشارة قطاعية — عفورة بلاست')">
+      <input placeholder="الاسم الكامل"><input placeholder="قطاعك (مثال: قهوة، ألبان…)"><input placeholder="البريد الإلكتروني"><textarea rows="4" placeholder="أخبرنا عن منتجك باختصار…"></textarea><button class="btn b1" type="submit">أرسل الطلب</button>
+    </form>
+  </div>
+</div></section>
+<div class="foot">© <span id="y">2026</span> عفورة بلاست — جميع الحقوق محفوظة.</div>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('sc',scrollY>20)},{passive:true});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.12});
+document.querySelectorAll('[data-r]').forEach(function(el){io.observe(el)});
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target,to=+el.dataset.to,s=null;function f(t){if(!s)s=t;var p=Math.min((t-s)/1500,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f);cio.unobserve(el)})},{threshold:.6});
+document.querySelectorAll('.c').forEach(function(el){cio.observe(el)});
+</script>
+</body></html>
