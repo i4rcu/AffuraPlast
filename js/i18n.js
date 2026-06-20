@@ -7,7 +7,7 @@ const I18N = {
     dir: "rtl",
     meta: { title: "عفورة بلاست — تغليفٌ يفهم قطاعك" },
     brand: { p1: "عفورة", p2: "بلاست" },
-    nav: { sectors: "القطاعات", solutions: "الحلول", options: "أنواع التغليف", faq: "الأسئلة", contact: "اتصل بنا", cta: "استشارة مجانية" },
+    nav: { sectors: "القطاعات", products: "المنتجات", solutions: "الحلول", options: "أنواع التغليف", faq: "الأسئلة", contact: "اتصل بنا", cta: "استشارة مجانية" },
     hero: {
       kicker: "خبراء التغليف · غازي عنتاب · منذ 2016",
       t1: "تغليفٌ",
@@ -49,6 +49,10 @@ const I18N = {
       t5t: "طباعة روتوغرافور", t5d: "ألوان غنية وتفاصيل دقيقة بكميات كبيرة.",
       t6t: "أفلام قابلة للتدوير", t6d: "حماية عالية مع مسؤولية بيئية."
     },
+    products: {
+      kicker: "كتالوج المنتجات", title: "منتجاتنا", sub: "نماذج من إنتاجنا الفعلي — لكل قطاع عبوته المناسبة.", link: "اطلب عرض سعر",
+      items: ["أكياس القهوة","أكياس ستاند أب بسحّاب","بقوليات","مكسّرات","رقائق (شيبس)","بسكويت","حلويات","أغذية جافة","رول تغليف المثلجات","رول تغليف النظافة والتعقيم","رول تغليف مسحوق الغسيل","تغليف الكمّامات"]
+    },
     why: {
       kicker: "لماذا الخبرة القطاعية",
       title: "العبوة الخطأ تُكلّفك مبيعات. الصحيحة تحمي وتبيع.",
@@ -81,7 +85,7 @@ const I18N = {
     dir: "ltr",
     meta: { title: "Affura Plast — Sektörünü Anlayan Ambalaj" },
     brand: { p1: "Affura", p2: "Plast" },
-    nav: { sectors: "Sektörler", solutions: "Çözümler", options: "Ambalaj Tipleri", faq: "S.S.S.", contact: "İletişim", cta: "Ücretsiz Danışmanlık" },
+    nav: { sectors: "Sektörler", products: "Ürünler", solutions: "Çözümler", options: "Ambalaj Tipleri", faq: "S.S.S.", contact: "İletişim", cta: "Ücretsiz Danışmanlık" },
     hero: {
       kicker: "Ambalaj uzmanları · Gaziantep · 2016'dan beri",
       t1: "Sektörünü",
@@ -123,6 +127,10 @@ const I18N = {
       t5t: "Rotogravür Baskı", t5d: "Yüksek adetlerde zengin renk, keskin detay.",
       t6t: "Geri Dönüştürülebilir Film", t6d: "Yüksek koruma + çevresel sorumluluk."
     },
+    products: {
+      kicker: "Ürün Kataloğu", title: "Ürünlerimiz", sub: "Gerçek üretimimizden örnekler — her sektöre uygun ambalaj.", link: "Teklif İste",
+      items: ["Kahve Torbaları","Kilitli Stand-up Torba","Bakliyat","Çerezler","Cips","Bisküvi","Şekerleme","Kuru Gıda","Dondurma Ambalaj Rulosu","Hijyen & Temizlik Rulosu","Toz Deterjan Ambalaj Rulosu","Maske Ambalajı"]
+    },
     why: {
       kicker: "Neden Sektör Uzmanlığı",
       title: "Yanlış ambalaj satış kaybettirir. Doğrusu korur ve satar.",
@@ -155,7 +163,7 @@ const I18N = {
     dir: "ltr",
     meta: { title: "Affura Plast — Packaging That Understands Your Sector" },
     brand: { p1: "Affura", p2: "Plast" },
-    nav: { sectors: "Sectors", solutions: "Solutions", options: "Packaging Types", faq: "FAQ", contact: "Contact", cta: "Free Consultation" },
+    nav: { sectors: "Sectors", products: "Products", solutions: "Solutions", options: "Packaging Types", faq: "FAQ", contact: "Contact", cta: "Free Consultation" },
     hero: {
       kicker: "Packaging experts · Gaziantep · since 2016",
       t1: "Packaging that",
@@ -196,6 +204,10 @@ const I18N = {
       t4t: "Lamination", t4d: "Layers for durability and a flavour barrier.",
       t5t: "Gravure Printing", t5d: "Rich colour, sharp detail at high volume.",
       t6t: "Recyclable Films", t6d: "High protection with environmental responsibility."
+    },
+    products: {
+      kicker: "Product Catalogue", title: "Our Products", sub: "Samples from our real production — packaging for every sector.", link: "Request a Quote",
+      items: ["Coffee Bags","Zip-Lock Stand-up Pouch","Legumes","Nuts","Chips","Biscuit","Confectionery","Dry Food","Ice-Cream Packaging Roll","Hygiene & Cleaning Roll","Detergent Packaging Roll","Mask Packaging"]
     },
     why: {
       kicker: "Why Sector Expertise",
